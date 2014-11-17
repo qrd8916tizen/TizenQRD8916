@@ -1,0 +1,57 @@
+diff --git a/BoardConfig.mk b/BoardConfig.mk
+index 192cc54..00ddc08 100644
+--- a/BoardConfig.mk
++++ b/BoardConfig.mk
+@@ -74,7 +74,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
+ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+ BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
+ 
+-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci
++BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci debug root=/dev/mmcblk0p23 rootfstype=ext4 rw
+ BOARD_KERNEL_SEPARATED_DT := true
+ 
+ BOARD_EGL_CFG := device/qcom/msm8916_32/egl.cfg
+diff --git a/init.target.rc b/init.target.rc
+index 2af2e4e..43cbcca 100644
+--- a/init.target.rc
++++ b/init.target.rc
+@@ -29,7 +29,7 @@
+ 
+ on early-init
+     mkdir /firmware 0771 system system
+-    mkdir /system 0777 root root
++    #mkdir /system 0777 root root
+     symlink /data/tombstones /tombstones
+ 
+ # import cne init file
+@@ -37,20 +37,23 @@ on post-fs
+     export LD_PRELOAD /vendor/lib/libNimsWrap.so
+ 
+ on fs
+-    mount_all fstab.qcom
++    #mount_all fstab.qcom
+ 
+     # Keeping following partitions outside fstab file. As user may not have
+     # these partition flashed on the device. Failure to mount any partition in fstab file
+     # results in failure to launch late-start class.
+ 
+-    wait /dev/block/bootdevice/by-name/cache
+-    mount ext4 /dev/block/bootdevice/by-name/cache /cache nosuid nodev barrier=1
++    #wait /dev/block/bootdevice/by-name/cache
++    #mount ext4 /dev/block/bootdevice/by-name/cache /cache nosuid nodev barrier=1
+ 
+-    wait /dev/block/bootdevice/by-name/persist
+-    mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev barrier=1
++    #wait /dev/block/bootdevice/by-name/persist
++    #mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev barrier=1
++    mount ext4 /dev/mmcblk0p24 /persist nosuid nodev barrier=1
+ 
+-    wait /dev/block/bootdevice/by-name/modem
+-    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
++    #wait /dev/block/bootdevice/by-name/modem
++    #mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
++    mount vfat /dev/mmcblk0p1 /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
++    #mount vfat /dev/mmcblk0p1 /firmware
+     #write /sys/kernel/boot_adsp/boot 1
+ 
+ on post-fs-data

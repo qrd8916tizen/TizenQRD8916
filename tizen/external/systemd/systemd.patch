@@ -1,0 +1,178 @@
+diff --git a/packaging/add-tmp.mount-as-tmpfs.patch b/packaging/add-tmp.mount-as-tmpfs.patch
+index 9932966..a37f174 100644
+--- a/packaging/add-tmp.mount-as-tmpfs.patch
++++ b/packaging/add-tmp.mount-as-tmpfs.patch
+@@ -49,7 +49,7 @@ index 0000000..7c3e98c
+ +What=tmpfs
+ +Where=/tmp
+ +Type=tmpfs
+-+Options=relatime,nodev,nosuid,noexec,size=128M,smackfsroot=*
+++Options=relatime,nodev,nosuid,noexec,size=128M
+ -- 
+ 1.7.10
+ 
+diff --git a/packaging/default_oom_score.patch b/packaging/default_oom_score.patch
+index 3e877c9..2ad92cc 100644
+--- a/packaging/default_oom_score.patch
++++ b/packaging/default_oom_score.patch
+@@ -32,27 +32,3 @@ index ed317b4..6b56a86 100644
+  
+          if (arg_running_as == MANAGER_SYSTEM)
+                  if (parse_proc_cmdline() < 0)
+-diff --git a/src/system.conf b/src/system.conf
+-index 33d09bc..c24a606 100644
+---- a/src/system.conf
+-+++ b/src/system.conf
+-@@ -18,6 +18,7 @@
+- #SysVConsole=yes
+- #CrashChVT=1
+- #CPUAffinity=1 2
+-+DefaultOOMScoreAdj=-1000
+- #MountAuto=yes
+- #SwapAuto=yes
+- #DefaultControllers=cpu
+-diff --git a/src/user.conf b/src/user.conf
+-index 9508a02..70c5540 100644
+---- a/src/user.conf
+-+++ b/src/user.conf
+-@@ -8,6 +8,7 @@
+- # See systemd.conf(5) for details
+- 
+- [Manager]
+-+DefaultOOMScoreAdj=-1000
+- #LogLevel=info
+- #LogTarget=console
+- #LogColor=yes
+diff --git a/packaging/enable-core-dumps-globally.patch b/packaging/enable-core-dumps-globally.patch
+deleted file mode 100644
+index ea60d97..0000000
+--- a/packaging/enable-core-dumps-globally.patch
++++ /dev/null
+@@ -1,17 +0,0 @@
+-From 4e97690abedeb48640f07b9312c0fd3c1d7f3059 Mon Sep 17 00:00:00 2001
+-From: Karol Lewandowski <k.lewandowsk@samsung.com>
+-Date: Mon, 31 Dec 2012 14:35:36 +0100
+-Subject: [PATCH] Enable core dumps globally
+-
+-diff --git a/src/system.conf b/src/system.conf
+-index 33d09bc..6c6b7f5 100644
+---- a/src/system.conf
+-+++ b/src/system.conf
+-@@ -24,3 +24,4 @@
+- #DefaultStandardOutput=journal
+- #DefaultStandardError=inherit
+- #JoinControllers=cpu,cpuacct
+-+DefaultLimitCORE=infinity
+--- 
+-1.7.10.4
+-
+diff --git a/packaging/systemd.spec b/packaging/systemd.spec
+index b84044c..7e7856a 100644
+--- a/packaging/systemd.spec
++++ b/packaging/systemd.spec
+@@ -19,12 +19,11 @@ Patch6:     tizen-preserve-hostname.patch
+ Patch7:     util-never-follow-symlinks-in-rm_rf_children.patch
+ Patch8:     util-introduce-memdup.patch
+ Patch9:     main-allow-system-wide-limits-for-services.patch
+-Patch10:    enable-core-dumps-globally.patch
+-Patch11:    SMACK-Add-configuration-options.-v3.patch
+-Patch12:    reboot_syscall_param.patch
+-Patch13:    default_oom_score.patch
+-Patch14:    fix-syscall-NR_fanotify_mark-on-arm.patch
+-Patch15:    reboot-delay.patch
++Patch10:    SMACK-Add-configuration-options.-v3.patch
++Patch11:    reboot_syscall_param.patch
++Patch12:    default_oom_score.patch
++Patch13:    fix-syscall-NR_fanotify_mark-on-arm.patch
++Patch14:    reboot-delay.patch
+ 
+ BuildRequires:  pkgconfig(dbus-1) >= 1.4.0
+ BuildRequires:  pkgconfig(dbus-glib-1)
+@@ -52,16 +51,16 @@ implements an elaborate transactional dependency-based service
+ control logic. It can work as a drop-in replacement for sysvinit.
+ 
+ # tools package dislabled because of pycairo package dependency
+-# %package tools
+-# Summary:    Analyze systemd startup timing
+-# Group:      Development/Tools
+-# Requires:   pycairo
+-# Requires:   python-xml
+-# Requires:   %{name} = %{version}-%{release}
++%package tools
++Summary:    Analyze systemd startup timing
++Group:      Development/Tools
++Requires:   pycairo
++Requires:   python-xml
++Requires:   %{name} = %{version}-%{release}
+ 
+-# %description tools
+-# This package installs the systemd-analyze tool, which allows one to
+-# inspect and graph service startup timing in table or graph format.
++%description tools
++This package installs the systemd-analyze tool, which allows one to
++inspect and graph service startup timing in table or graph format.
+ 
+ %package devel
+ Summary:    Development tools for systemd
+@@ -181,7 +180,6 @@ This package includes the man pages for systemd.
+ %patch12 -p1
+ %patch13 -p1
+ %patch14 -p1
+-%patch15 -p1
+ 
+ %build
+ cp %{SOURCE1001} .
+@@ -245,6 +243,9 @@ ln -s ../serial-getty@.service %{buildroot}%{_libdir}/systemd/system/getty.targe
+ #console-ttySAC2
+ ln -s ../serial-getty@.service %{buildroot}%{_libdir}/systemd/system/getty.target.wants/serial-getty@ttySAC2.service
+ 
++#console-ttyHSL0
++ln -s ../serial-getty@.service %{buildroot}%{_libdir}/systemd/system/getty.target.wants/serial-getty@ttyHSL0.service
++
+ #console-ttyS0
+ ln -s ../serial-getty@.service %{buildroot}%{_libdir}/systemd/system/getty.target.wants/serial-getty@ttyS0.service
+ 
+@@ -356,10 +357,10 @@ ln -sf /proc/self/mounts /etc/mtab
+ 
+ 
+ # tools package dislabled because of pycairo package dependency
+-# %files tools
+-# %defattr(-,root,root,-)
+-# %manifest systemd.manifest
+-# %{_bindir}/systemd-analyze
++%files tools
++%defattr(-,root,root,-)
++%manifest systemd.manifest
++%{_bindir}/systemd-analyze
+ 
+ %files devel
+ %defattr(-,root,root,-)
+diff --git a/src/system.conf b/src/system.conf
+index 33d09bc..a6c8ce7 100644
+--- a/src/system.conf
++++ b/src/system.conf
+@@ -10,7 +10,10 @@
+ [Manager]
+ #LogLevel=info
+ #LogTarget=journal-or-kmsg
++#LogTarget=console
+ #LogColor=yes
++DefaultOOMScoreAdj=-1000
++DefaultLimitCORE=infinity
+ #LogLocation=no
+ #DumpCore=yes
+ #CrashShell=no
+diff --git a/src/user.conf b/src/user.conf
+index 9508a02..c166bdf 100644
+--- a/src/user.conf
++++ b/src/user.conf
+@@ -10,7 +10,8 @@
+ [Manager]
+ #LogLevel=info
+ #LogTarget=console
+-#LogColor=yes
++LogColor=yes
++DefaultOOMScoreAdj=-1000
+ #LogLocation=no
+ #DefaultControllers=cpu
+ #DefaultStandardOutput=inherit

@@ -1,0 +1,23 @@
+diff --git a/src/evdev.c b/src/evdev.c
+index 29e67e8..1039ab8 100755
+--- a/src/evdev.c
++++ b/src/evdev.c
+@@ -1556,7 +1556,7 @@ EvdevAddAbsValuatorClass(DeviceIntPtr device)
+         int mode = pEvdev->flags & EVDEV_TOUCHPAD ?
+             XIDependentTouch : XIDirectTouch;
+ 
+-        if (pEvdev->mtdev->caps.slot.maximum > 0)
++        if (pEvdev->mtdev && (pEvdev->mtdev->caps.slot.maximum > 0))
+             num_touches = pEvdev->mtdev->caps.slot.maximum;
+ 
+         if (!InitTouchClassDeviceStruct(device, num_touches, mode,
+@@ -2541,7 +2541,8 @@ EvdevOpenDevice(InputInfoPtr pInfo)
+         xf86IDrvMsg(pInfo, X_WARNING, "device file is duplicate. Ignoring.\n");
+         close(pInfo->fd);
+ #ifdef MULTITOUCH
+-        mtdev_close_delete(pEvdev->mtdev);
++	if(pEvdev->mtdev)
++            mtdev_close_delete(pEvdev->mtdev);
+         pEvdev->mtdev = NULL;
+ #endif
+         return BadMatch;

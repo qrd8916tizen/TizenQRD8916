@@ -1,0 +1,12 @@
+diff --git a/init_buildsystem b/init_buildsystem
+index 44da2f0..1a83bbe 100755
+--- a/init_buildsystem
++++ b/init_buildsystem
+@@ -262,6 +262,7 @@ create_devs()
+ 	mknod loop1   640 b 7 1
+ 	mknod loop2   640 b 7 2
+ 	mknod loop3   640 b 7 3
++	mknod kmsg    644 c 1 11
+ 	ln    fd      777 /proc/self/fd
+ 	ln    stdin   777 fd/0
+ 	ln    stdout  777 fd/1

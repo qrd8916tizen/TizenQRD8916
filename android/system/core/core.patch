@@ -1,0 +1,459 @@
+diff --git a/init/devices.c b/init/devices.c
+index f96bccb..9783baf 100644
+--- a/init/devices.c
++++ b/init/devices.c
+@@ -978,9 +978,12 @@ void device_init(void)
+ 
+     if (stat(coldboot_done, &info) < 0) {
+         t0 = get_usecs();
+-        coldboot("/sys/class");
+-        coldboot("/sys/block");
+-        coldboot("/sys/devices");
++/*
++ *      coldboot("/sys/class");
++ *      coldboot("/sys/block");
++ *      coldboot("/sys/devices");
++ */
++	coldboot("/sys/devices/soc.0/7824900.sdhci");
+         t1 = get_usecs();
+         fd = open(coldboot_done, O_WRONLY|O_CREAT, 0000);
+         close(fd);
+diff --git a/init/init.c b/init/init.c
+index 5d68d74..aa19407 100644
+--- a/init/init.c
++++ b/init/init.c
+@@ -985,19 +985,19 @@ int main(int argc, char **argv)
+          * together in the initramdisk on / and then we'll
+          * let the rc file figure out the rest.
+          */
+-    mkdir("/dev", 0755);
+-    mkdir("/proc", 0755);
+-    mkdir("/sys", 0755);
++//    mkdir("/dev", 0755);
++//    mkdir("/proc", 0755);
++//    mkdir("/sys", 0755);
+ 
+-    mount("tmpfs", "/dev", "tmpfs", MS_NOSUID, "mode=0755");
+-    mkdir("/dev/pts", 0755);
++//    mount("tmpfs", "/dev", "tmpfs", MS_NOSUID, "mode=0755");
++//    mkdir("/dev/pts", 0755);
+     mkdir("/dev/socket", 0755);
+-    mount("devpts", "/dev/pts", "devpts", 0, NULL);
+-    mount("proc", "/proc", "proc", 0, NULL);
+-    mount("sysfs", "/sys", "sysfs", 0, NULL);
++//    mount("devpts", "/dev/pts", "devpts", 0, NULL);
++//    mount("proc", "/proc", "proc", 0, NULL);
++//    mount("sysfs", "/sys", "sysfs", 0, NULL);
+ 
+         /* indicate that booting is in progress to background fw loaders, etc */
+-    close(open("/dev/.booting", O_WRONLY | O_CREAT, 0000));
++//    close(open("/dev/.booting", O_WRONLY | O_CREAT, 0000));
+ 
+         /* We must have some place other than / to create the
+          * device nodes for kmsg and null, otherwise we won't
+@@ -1005,7 +1005,7 @@ int main(int argc, char **argv)
+          * Now that tmpfs is mounted on /dev, we can actually
+          * talk to the outside world.
+          */
+-    open_devnull_stdio();
++   /*open_devnull_stdio();*/
+     klog_init();
+     property_init();
+ 
+@@ -1013,14 +1013,14 @@ int main(int argc, char **argv)
+ 
+     process_kernel_cmdline();
+ 
+-    union selinux_callback cb;
+-    cb.func_log = klog_write;
+-    selinux_set_callback(SELINUX_CB_LOG, cb);
++//    union selinux_callback cb;
++//    cb.func_log = klog_write;
++//    selinux_set_callback(SELINUX_CB_LOG, cb);
+ 
+-    cb.func_audit = audit_callback;
+-    selinux_set_callback(SELINUX_CB_AUDIT, cb);
++//    cb.func_audit = audit_callback;
++//    selinux_set_callback(SELINUX_CB_AUDIT, cb);
+ 
+-    selinux_initialize();
++//    selinux_initialize();
+     /* These directories were necessarily created before initial policy load
+      * and therefore need their security context restored to the proper value.
+      * This must happen before /dev is populated by ueventd.
+diff --git a/init/property_service.c b/init/property_service.c
+index 1f5b1f9..f5f9838 100644
+--- a/init/property_service.c
++++ b/init/property_service.c
+@@ -69,7 +69,7 @@
+ #include "log.h"
+ #include "vendor_init.h"
+ 
+-#define PERSISTENT_PROPERTY_DIR  "/data/property"
++#define PERSISTENT_PROPERTY_DIR  "/system/property"
+ 
+ static int persistent_properties_loaded = 0;
+ static int property_area_inited = 0;
+diff --git a/init/ueventd.c b/init/ueventd.c
+index 53cc9ac..e3c4c2c 100644
+--- a/init/ueventd.c
++++ b/init/ueventd.c
+@@ -72,7 +72,7 @@ int ueventd_main(int argc, char **argv)
+      */
+     signal(SIGCHLD, SIG_IGN);
+ 
+-    open_devnull_stdio();
++    /*open_devnull_stdio();*/
+     klog_init();
+ 
+     INFO("starting ueventd\n");
+diff --git a/rootdir/init.rc b/rootdir/init.rc
+index 322985e..c0a968a 100644
+--- a/rootdir/init.rc
++++ b/rootdir/init.rc
+@@ -9,7 +9,7 @@
+ 
+ import /init.environ.rc
+ import /init.usb.rc
+-import /init.${ro.hardware}.rc
++import /init.qcom.rc
+ import /init.trace.rc
+ 
+ on early-init
+@@ -23,7 +23,7 @@ on early-init
+     start ueventd
+ 
+ # create mountpoints
+-    mkdir /mnt 0775 root system
++    #mkdir /mnt 0775 root system
+ 
+ on init
+ 
+@@ -32,12 +32,12 @@ sysclktz 0
+ loglevel 3
+ 
+ # Backward compatibility
+-    symlink /system/etc /etc
++    #symlink /system/etc /etc
+     symlink /sys/kernel/debug /d
+ 
+ # Right now vendor lives on the same filesystem as system,
+ # but someday that may change.
+-    symlink /system/vendor /vendor
++    #symlink /system/vendor /vendor
+ 
+ # Create cgroup mount point for cpu accounting
+     mkdir /acct
+@@ -57,9 +57,9 @@ loglevel 3
+     chown root system /sys/fs/cgroup/memory/sw/tasks
+     chmod 0660 /sys/fs/cgroup/memory/sw/tasks
+ 
+-    mkdir /system
+-    mkdir /data 0771 system system
+-    mkdir /cache 0770 system cache
++    #mkdir /system
++    #mkdir /data 0771 system system
++    #mkdir /cache 0770 system cache
+     mkdir /config 0500 root root
+ 
+     # See storage config details at http://source.android.com/tech/storage/
+@@ -146,21 +146,21 @@ loglevel 3
+ 
+ on post-fs
+     # once everything is setup, no need to modify /
+-    mount rootfs rootfs / ro remount
++    #mount rootfs rootfs / ro remount
+     # mount shared so changes propagate into child namespaces
+-    mount rootfs rootfs / shared rec
++    #mount rootfs rootfs / shared rec
+ 
+     # We chown/chmod /cache again so because mount is run as root + defaults
+-    chown system cache /cache
+-    chmod 0770 /cache
++    #chown system cache /cache
++    #chmod 0770 /cache
+     # We restorecon /cache in case the cache partition has been reset.
+-    restorecon /cache
++    #restorecon /cache
+ 
+     # This may have been created by the recovery system with odd permissions
+-    chown system cache /cache/recovery
+-    chmod 0770 /cache/recovery
++    #chown system cache /cache/recovery
++    #chmod 0770 /cache/recovery
+     # This may have been created by the recovery system with the wrong context.
+-    restorecon /cache/recovery
++    #restorecon /cache/recovery
+ 
+     #change permissions on vmallocinfo so we can grab it from bugreports
+     chown root log /proc/vmallocinfo
+@@ -178,12 +178,12 @@ on post-fs
+     chmod 0440 /proc/last_kmsg
+ 
+     # create the lost+found directories, so as to enforce our permissions
+-    mkdir /cache/lost+found 0770 root root
++    #mkdir /cache/lost+found 0770 root root
+ 
+ on post-fs-data
+     # We chown/chmod /data again so because mount is run as root + defaults
+-    chown system system /data
+-    chmod 0771 /data
++    #chown system system /data
++    #chmod 0771 /data
+     # We restorecon /data in case the userdata partition has been reset.
+     restorecon /data
+ 
+@@ -420,20 +420,20 @@ on property:sys.sysctl.tcp_def_init_rwnd=*
+ 
+ ## Daemon processes to be run by init.
+ ##
+-service ueventd /sbin/ueventd
++service ueventd /system/bin/ueventd
+     class core
+     critical
+     seclabel u:r:ueventd:s0
+ 
+-service healthd /sbin/healthd
+-    class core
+-    critical
+-    seclabel u:r:healthd:s0
++#service healthd /sbin/healthd
++#    class core
++#    critical
++#    seclabel u:r:healthd:s0
+ 
+-service healthd-charger /sbin/healthd -n
+-    class charger
+-    critical
+-    seclabel u:r:healthd:s0
++#service healthd-charger /sbin/healthd -n
++#    class charger
++#    critical
++#    seclabel u:r:healthd:s0
+ 
+ on property:selinux.reload_policy=1
+     restart ueventd
+@@ -460,113 +460,113 @@ service adbd /sbin/adbd
+ on property:ro.kernel.qemu=1
+     start adbd
+ 
+-service servicemanager /system/bin/servicemanager
+-    class core
+-    user system
+-    group system
+-    critical
+-    onrestart restart healthd
+-    onrestart restart zygote
+-    onrestart restart media
+-    onrestart restart surfaceflinger
+-    onrestart restart drm
+-
+-service vold /system/bin/vold
+-    class core
+-    socket vold stream 0660 root mount
+-    ioprio be 2
+-
+-service netd /system/bin/netd
+-    class main
+-    socket netd stream 0660 root system
+-    socket dnsproxyd stream 0660 root inet
+-    socket mdns stream 0660 root system
+-
+-service debuggerd /system/bin/debuggerd
+-    class main
+-
+-service ril-daemon /system/bin/rild
+-    class main
+-    socket rild stream 660 root radio
+-    socket rild-debug stream 660 radio system
+-    user root
+-    group radio cache inet misc audio log qcom_diag sdcard_r sdcard_rw
+-
+-service surfaceflinger /system/bin/surfaceflinger
+-    class main
+-    user system
+-    group graphics drmrpc
+-    onrestart restart zygote
+-
+-service zygote /system/bin/app_process -Xzygote /system/bin --zygote --start-system-server
+-    class main
+-    socket zygote stream 660 root system
+-    onrestart write /sys/android_power/request_state wake
+-    onrestart write /sys/power/state on
+-    onrestart restart media
+-    onrestart restart netd
+-
+-service drm /system/bin/drmserver
+-    class main
+-    user drm
+-    group drm system inet drmrpc
+-
+-service media /system/bin/mediaserver
+-    class main
+-    user media
+-    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm qcom_diag
+-    ioprio rt 4
+-
+-service bootanim /system/bin/bootanimation
+-    class main
+-    user media
+-    group graphics audio
+-    disabled
+-    oneshot
+-
+-service installd /system/bin/installd
+-    class main
+-    socket installd stream 600 system system
+-
+-service flash_recovery /system/etc/install-recovery.sh
+-    class main
+-    oneshot
+-
+-service racoon /system/bin/racoon
+-    class main
+-    socket racoon stream 600 system system
+-    # IKE uses UDP port 500. Racoon will setuid to vpn after binding the port.
+-    group vpn net_admin inet
+-    disabled
+-    oneshot
+-
+-service mtpd /system/bin/mtpd
+-    class main
+-    socket mtpd stream 600 system system
+-    user vpn
+-    group vpn net_admin inet net_raw
+-    disabled
+-    oneshot
+-
+-service keystore /system/bin/keystore /data/misc/keystore
+-    class main
+-    user keystore
+-    group keystore drmrpc
+-
+-service dumpstate /system/bin/dumpstate -s
+-    class main
+-    socket dumpstate stream 0660 shell log
+-    disabled
+-    oneshot
+-
+-service sshd /system/bin/start-ssh
+-    class main
+-    disabled
+-
+-service mdnsd /system/bin/mdnsd
+-    class main
+-    user mdnsr
+-    group inet net_raw
+-    socket mdnsd stream 0660 mdnsr inet
+-    disabled
+-    oneshot
++#service servicemanager /system/bin/servicemanager
++#    class core
++#    user system
++#    group system
++#    critical
++#    onrestart restart healthd
++#    onrestart restart zygote
++#    onrestart restart media
++#    onrestart restart surfaceflinger
++#    onrestart restart drm
++
++#service vold /system/bin/vold
++#    class core
++#    socket vold stream 0660 root mount
++#    ioprio be 2
++
++#service netd /system/bin/netd
++#    class main
++#    socket netd stream 0660 root system
++#    socket dnsproxyd stream 0660 root inet
++#    socket mdns stream 0660 root system
++
++#service debuggerd /system/bin/debuggerd
++#    class main
++
++#service ril-daemon /system/bin/rild
++#    class main
++#    socket rild stream 660 root radio
++#    socket rild-debug stream 660 radio system
++#    user root
++#    group radio cache inet misc audio log qcom_diag sdcard_r sdcard_rw
++
++#service surfaceflinger /system/bin/surfaceflinger
++#    class main
++#    user system
++#    group graphics drmrpc
++#    onrestart restart zygote
++
++#service zygote /system/bin/app_process -Xzygote /system/bin --zygote --start-system-server
++#    class main
++#    socket zygote stream 660 root system
++#    onrestart write /sys/android_power/request_state wake
++#    onrestart write /sys/power/state on
++#    onrestart restart media
++#    onrestart restart netd
++
++#service drm /system/bin/drmserver
++#    class main
++#    user drm
++#    group drm system inet drmrpc
++
++#service media /system/bin/mediaserver
++#    class main
++#    user media
++#    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm qcom_diag
++#    ioprio rt 4
++
++#service bootanim /system/bin/bootanimation
++#    class main
++#    user media
++#    group graphics audio
++#    disabled
++#    oneshot
++
++#service installd /system/bin/installd
++#    class main
++#    socket installd stream 600 system system
++
++#service flash_recovery /system/etc/install-recovery.sh
++#    class main
++#    oneshot
++
++#service racoon /system/bin/racoon
++#    class main
++#    socket racoon stream 600 system system
++#    # IKE uses UDP port 500. Racoon will setuid to vpn after binding the port.
++#    group vpn net_admin inet
++#    disabled
++#    oneshot
++
++#service mtpd /system/bin/mtpd
++#    class main
++#    socket mtpd stream 600 system system
++#    user vpn
++#    group vpn net_admin inet net_raw
++#    disabled
++#    oneshot
++
++#service keystore /system/bin/keystore /data/misc/keystore
++#    class main
++#    user keystore
++#    group keystore drmrpc
++
++#service dumpstate /system/bin/dumpstate -s
++#    class main
++#    socket dumpstate stream 0660 shell log
++#    disabled
++#    oneshot
++
++#service sshd /system/bin/start-ssh
++#    class main
++#    disabled
++
++#service mdnsd /system/bin/mdnsd
++#    class main
++#    user mdnsr
++#    group inet net_raw
++#    socket mdnsd stream 0660 mdnsr inet
++#    disabled
++#    oneshot

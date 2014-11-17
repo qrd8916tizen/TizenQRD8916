@@ -1,0 +1,24 @@
+diff --git a/ext4_utils/make_ext4fs.c b/ext4_utils/make_ext4fs.c
+index c2a2665..6e2fc13 100644
+--- a/ext4_utils/make_ext4fs.c
++++ b/ext4_utils/make_ext4fs.c
+@@ -164,6 +164,8 @@ static u32 build_directory_structure(const char *full_path, const char *dir_path
+ 		dentries[i].size = stat.st_size;
+ 		dentries[i].mode = stat.st_mode & (S_ISUID|S_ISGID|S_ISVTX|S_IRWXU|S_IRWXG|S_IRWXO);
+ 		dentries[i].mtime = stat.st_mtime;
++		dentries[i].uid = stat.st_uid;
++		dentries[i].gid = stat.st_gid;
+ 		uint64_t capabilities;
+ 		if (fs_config_func != NULL) {
+ #ifdef ANDROID
+@@ -242,7 +244,9 @@ static u32 build_directory_structure(const char *full_path, const char *dir_path
+ 	inode = make_directory(dir_inode, entries, dentries, dirs);
+ 
+ 	for (i = 0; i < entries; i++) {
+-		if (dentries[i].file_type == EXT4_FT_REG_FILE) {
++		if ((dentries[i].file_type == EXT4_FT_REG_FILE) ||
++		    (dentries[i].file_type == EXT4_FT_CHRDEV) ||
++		    (dentries[i].file_type == EXT4_FT_BLKDEV)) {
+ 			entry_inode = make_file(dentries[i].full_path, dentries[i].size);
+ 		} else if (dentries[i].file_type == EXT4_FT_DIR) {
+ 			char *subdir_full_path = NULL;

@@ -1,0 +1,13 @@
+diff --git a/hw/xfree86/common/Makefile.am b/hw/xfree86/common/Makefile.am
+index f8fcde9..e1a3bad 100644
+--- a/hw/xfree86/common/Makefile.am
++++ b/hw/xfree86/common/Makefile.am
+@@ -63,7 +63,7 @@ sdk_HEADERS = compiler.h fourcc.h xf86.h xf86Module.h xf86Opt.h \
+               xf86cmap.h xf86fbman.h xf86str.h xf86Xinput.h xisb.h \
+               $(XVSDKINCS) $(XF86VMODE_SDK) $(DGA_SDK) xorgVersion.h \
+               xf86sbusBus.h xf86VGAarbiter.h xf86Optionstr.h xf86platformBus.h \
+-	      xaarop.h
++	      xaarop.h dgaproc.h
+ 
+ DISTCLEANFILES = xf86Build.h
+ CLEANFILES = $(BUILT_SOURCES)
