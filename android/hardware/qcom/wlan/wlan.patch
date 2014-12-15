@@ -1,0 +1,14 @@
+diff --git a/wcnss-service/wcnss_service.c b/wcnss-service/wcnss_service.c
+index c42856a..94ccb91 100644
+--- a/wcnss-service/wcnss_service.c
++++ b/wcnss-service/wcnss_service.c
+@@ -446,7 +446,8 @@ int main(int argc, char *argv[])
+ 
+ 	setup_wlan_config_file();
+ 
+-#ifdef WCNSS_QMI
++/*#ifdef WCNSS_QMI*/
++#if 0
+ 	/* initialize the DMS client and request the wlan mac address */
+ 
+ 	if (SUCCESS == wcnss_init_qmi()) {
