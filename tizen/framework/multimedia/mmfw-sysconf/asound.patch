@@ -1,0 +1,44 @@
+diff --git a/mmfw-sysconf-cleansdk-target/etc/asound.conf b/mmfw-sysconf-cleansdk-target/etc/asound.conf
+index f38749a..fd11cd7 100644
+--- a/mmfw-sysconf-cleansdk-target/etc/asound.conf
++++ b/mmfw-sysconf-cleansdk-target/etc/asound.conf
+@@ -1,21 +1,37 @@
+ # default sound configuration for c210
+ 
+ pcm. !default {
++             type hw
++             card 0
++}
++
++ctl. !default {
+ 	type hw
+ 	card 0
+ }
+ 
+-ctl. !default {
++ctl. msm8x16-skui-snd-card {
+ 	type hw
+ 	card 0
+ }
+ 
++pcm. msm8x16-skui-snd-card {
++    type plug
++    slave.pcm{
++	type hw
++        card 0
++        device 0
++        }       
++}	
++
+ pcm. AIF2{
+ 	type hw
+ 	card 0
+-	device 1
++	device 2
+ }
+ 
++
++
+ pcm. AIF3{
+ 	type hw
+ 	card 0

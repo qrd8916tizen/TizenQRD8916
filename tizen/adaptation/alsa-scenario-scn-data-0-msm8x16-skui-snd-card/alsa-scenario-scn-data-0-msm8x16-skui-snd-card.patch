@@ -1,0 +1,2860 @@
+diff --git a/LICENSE.LGPLv2.1 b/LICENSE.LGPLv2.1
+new file mode 100644
+index 0000000..4362b49
+--- /dev/null
++++ b/LICENSE.LGPLv2.1
+@@ -0,0 +1,502 @@
++                  GNU LESSER GENERAL PUBLIC LICENSE
++                       Version 2.1, February 1999
++
++ Copyright (C) 1991, 1999 Free Software Foundation, Inc.
++ 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
++ Everyone is permitted to copy and distribute verbatim copies
++ of this license document, but changing it is not allowed.
++
++[This is the first released version of the Lesser GPL.  It also counts
++ as the successor of the GNU Library Public License, version 2, hence
++ the version number 2.1.]
++
++                            Preamble
++
++  The licenses for most software are designed to take away your
++freedom to share and change it.  By contrast, the GNU General Public
++Licenses are intended to guarantee your freedom to share and change
++free software--to make sure the software is free for all its users.
++
++  This license, the Lesser General Public License, applies to some
++specially designated software packages--typically libraries--of the
++Free Software Foundation and other authors who decide to use it.  You
++can use it too, but we suggest you first think carefully about whether
++this license or the ordinary General Public License is the better
++strategy to use in any particular case, based on the explanations below.
++
++  When we speak of free software, we are referring to freedom of use,
++not price.  Our General Public Licenses are designed to make sure that
++you have the freedom to distribute copies of free software (and charge
++for this service if you wish); that you receive source code or can get
++it if you want it; that you can change the software and use pieces of
++it in new free programs; and that you are informed that you can do
++these things.
++
++  To protect your rights, we need to make restrictions that forbid
++distributors to deny you these rights or to ask you to surrender these
++rights.  These restrictions translate to certain responsibilities for
++you if you distribute copies of the library or if you modify it.
++
++  For example, if you distribute copies of the library, whether gratis
++or for a fee, you must give the recipients all the rights that we gave
++you.  You must make sure that they, too, receive or can get the source
++code.  If you link other code with the library, you must provide
++complete object files to the recipients, so that they can relink them
++with the library after making changes to the library and recompiling
++it.  And you must show them these terms so they know their rights.
++
++  We protect your rights with a two-step method: (1) we copyright the
++library, and (2) we offer you this license, which gives you legal
++permission to copy, distribute and/or modify the library.
++
++  To protect each distributor, we want to make it very clear that
++there is no warranty for the free library.  Also, if the library is
++modified by someone else and passed on, the recipients should know
++that what they have is not the original version, so that the original
++author's reputation will not be affected by problems that might be
++introduced by others.
++
++  Finally, software patents pose a constant threat to the existence of
++any free program.  We wish to make sure that a company cannot
++effectively restrict the users of a free program by obtaining a
++restrictive license from a patent holder.  Therefore, we insist that
++any patent license obtained for a version of the library must be
++consistent with the full freedom of use specified in this license.
++
++  Most GNU software, including some libraries, is covered by the
++ordinary GNU General Public License.  This license, the GNU Lesser
++General Public License, applies to certain designated libraries, and
++is quite different from the ordinary General Public License.  We use
++this license for certain libraries in order to permit linking those
++libraries into non-free programs.
++
++  When a program is linked with a library, whether statically or using
++a shared library, the combination of the two is legally speaking a
++combined work, a derivative of the original library.  The ordinary
++General Public License therefore permits such linking only if the
++entire combination fits its criteria of freedom.  The Lesser General
++Public License permits more lax criteria for linking other code with
++the library.
++
++  We call this license the "Lesser" General Public License because it
++does Less to protect the user's freedom than the ordinary General
++Public License.  It also provides other free software developers Less
++of an advantage over competing non-free programs.  These disadvantages
++are the reason we use the ordinary General Public License for many
++libraries.  However, the Lesser license provides advantages in certain
++special circumstances.
++
++  For example, on rare occasions, there may be a special need to
++encourage the widest possible use of a certain library, so that it becomes
++a de-facto standard.  To achieve this, non-free programs must be
++allowed to use the library.  A more frequent case is that a free
++library does the same job as widely used non-free libraries.  In this
++case, there is little to gain by limiting the free library to free
++software only, so we use the Lesser General Public License.
++
++  In other cases, permission to use a particular library in non-free
++programs enables a greater number of people to use a large body of
++free software.  For example, permission to use the GNU C Library in
++non-free programs enables many more people to use the whole GNU
++operating system, as well as its variant, the GNU/Linux operating
++system.
++
++  Although the Lesser General Public License is Less protective of the
++users' freedom, it does ensure that the user of a program that is
++linked with the Library has the freedom and the wherewithal to run
++that program using a modified version of the Library.
++
++  The precise terms and conditions for copying, distribution and
++modification follow.  Pay close attention to the difference between a
++"work based on the library" and a "work that uses the library".  The
++former contains code derived from the library, whereas the latter must
++be combined with the library in order to run.
++
++                  GNU LESSER GENERAL PUBLIC LICENSE
++   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
++
++  0. This License Agreement applies to any software library or other
++program which contains a notice placed by the copyright holder or
++other authorized party saying it may be distributed under the terms of
++this Lesser General Public License (also called "this License").
++Each licensee is addressed as "you".
++
++  A "library" means a collection of software functions and/or data
++prepared so as to be conveniently linked with application programs
++(which use some of those functions and data) to form executables.
++
++  The "Library", below, refers to any such software library or work
++which has been distributed under these terms.  A "work based on the
++Library" means either the Library or any derivative work under
++copyright law: that is to say, a work containing the Library or a
++portion of it, either verbatim or with modifications and/or translated
++straightforwardly into another language.  (Hereinafter, translation is
++included without limitation in the term "modification".)
++
++  "Source code" for a work means the preferred form of the work for
++making modifications to it.  For a library, complete source code means
++all the source code for all modules it contains, plus any associated
++interface definition files, plus the scripts used to control compilation
++and installation of the library.
++
++  Activities other than copying, distribution and modification are not
++covered by this License; they are outside its scope.  The act of
++running a program using the Library is not restricted, and output from
++such a program is covered only if its contents constitute a work based
++on the Library (independent of the use of the Library in a tool for
++writing it).  Whether that is true depends on what the Library does
++and what the program that uses the Library does.
++
++  1. You may copy and distribute verbatim copies of the Library's
++complete source code as you receive it, in any medium, provided that
++you conspicuously and appropriately publish on each copy an
++appropriate copyright notice and disclaimer of warranty; keep intact
++all the notices that refer to this License and to the absence of any
++warranty; and distribute a copy of this License along with the
++Library.
++
++  You may charge a fee for the physical act of transferring a copy,
++and you may at your option offer warranty protection in exchange for a
++fee.
++
++  2. You may modify your copy or copies of the Library or any portion
++of it, thus forming a work based on the Library, and copy and
++distribute such modifications or work under the terms of Section 1
++above, provided that you also meet all of these conditions:
++
++    a) The modified work must itself be a software library.
++
++    b) You must cause the files modified to carry prominent notices
++    stating that you changed the files and the date of any change.
++
++    c) You must cause the whole of the work to be licensed at no
++    charge to all third parties under the terms of this License.
++
++    d) If a facility in the modified Library refers to a function or a
++    table of data to be supplied by an application program that uses
++    the facility, other than as an argument passed when the facility
++    is invoked, then you must make a good faith effort to ensure that,
++    in the event an application does not supply such function or
++    table, the facility still operates, and performs whatever part of
++    its purpose remains meaningful.
++
++    (For example, a function in a library to compute square roots has
++    a purpose that is entirely well-defined independent of the
++    application.  Therefore, Subsection 2d requires that any
++    application-supplied function or table used by this function must
++    be optional: if the application does not supply it, the square
++    root function must still compute square roots.)
++
++These requirements apply to the modified work as a whole.  If
++identifiable sections of that work are not derived from the Library,
++and can be reasonably considered independent and separate works in
++themselves, then this License, and its terms, do not apply to those
++sections when you distribute them as separate works.  But when you
++distribute the same sections as part of a whole which is a work based
++on the Library, the distribution of the whole must be on the terms of
++this License, whose permissions for other licensees extend to the
++entire whole, and thus to each and every part regardless of who wrote
++it.
++
++Thus, it is not the intent of this section to claim rights or contest
++your rights to work written entirely by you; rather, the intent is to
++exercise the right to control the distribution of derivative or
++collective works based on the Library.
++
++In addition, mere aggregation of another work not based on the Library
++with the Library (or with a work based on the Library) on a volume of
++a storage or distribution medium does not bring the other work under
++the scope of this License.
++
++  3. You may opt to apply the terms of the ordinary GNU General Public
++License instead of this License to a given copy of the Library.  To do
++this, you must alter all the notices that refer to this License, so
++that they refer to the ordinary GNU General Public License, version 2,
++instead of to this License.  (If a newer version than version 2 of the
++ordinary GNU General Public License has appeared, then you can specify
++that version instead if you wish.)  Do not make any other change in
++these notices.
++
++  Once this change is made in a given copy, it is irreversible for
++that copy, so the ordinary GNU General Public License applies to all
++subsequent copies and derivative works made from that copy.
++
++  This option is useful when you wish to copy part of the code of
++the Library into a program that is not a library.
++
++  4. You may copy and distribute the Library (or a portion or
++derivative of it, under Section 2) in object code or executable form
++under the terms of Sections 1 and 2 above provided that you accompany
++it with the complete corresponding machine-readable source code, which
++must be distributed under the terms of Sections 1 and 2 above on a
++medium customarily used for software interchange.
++
++  If distribution of object code is made by offering access to copy
++from a designated place, then offering equivalent access to copy the
++source code from the same place satisfies the requirement to
++distribute the source code, even though third parties are not
++compelled to copy the source along with the object code.
++
++  5. A program that contains no derivative of any portion of the
++Library, but is designed to work with the Library by being compiled or
++linked with it, is called a "work that uses the Library".  Such a
++work, in isolation, is not a derivative work of the Library, and
++therefore falls outside the scope of this License.
++
++  However, linking a "work that uses the Library" with the Library
++creates an executable that is a derivative of the Library (because it
++contains portions of the Library), rather than a "work that uses the
++library".  The executable is therefore covered by this License.
++Section 6 states terms for distribution of such executables.
++
++  When a "work that uses the Library" uses material from a header file
++that is part of the Library, the object code for the work may be a
++derivative work of the Library even though the source code is not.
++Whether this is true is especially significant if the work can be
++linked without the Library, or if the work is itself a library.  The
++threshold for this to be true is not precisely defined by law.
++
++  If such an object file uses only numerical parameters, data
++structure layouts and accessors, and small macros and small inline
++functions (ten lines or less in length), then the use of the object
++file is unrestricted, regardless of whether it is legally a derivative
++work.  (Executables containing this object code plus portions of the
++Library will still fall under Section 6.)
++
++  Otherwise, if the work is a derivative of the Library, you may
++distribute the object code for the work under the terms of Section 6.
++Any executables containing that work also fall under Section 6,
++whether or not they are linked directly with the Library itself.
++
++  6. As an exception to the Sections above, you may also combine or
++link a "work that uses the Library" with the Library to produce a
++work containing portions of the Library, and distribute that work
++under terms of your choice, provided that the terms permit
++modification of the work for the customer's own use and reverse
++engineering for debugging such modifications.
++
++  You must give prominent notice with each copy of the work that the
++Library is used in it and that the Library and its use are covered by
++this License.  You must supply a copy of this License.  If the work
++during execution displays copyright notices, you must include the
++copyright notice for the Library among them, as well as a reference
++directing the user to the copy of this License.  Also, you must do one
++of these things:
++
++    a) Accompany the work with the complete corresponding
++    machine-readable source code for the Library including whatever
++    changes were used in the work (which must be distributed under
++    Sections 1 and 2 above); and, if the work is an executable linked
++    with the Library, with the complete machine-readable "work that
++    uses the Library", as object code and/or source code, so that the
++    user can modify the Library and then relink to produce a modified
++    executable containing the modified Library.  (It is understood
++    that the user who changes the contents of definitions files in the
++    Library will not necessarily be able to recompile the application
++    to use the modified definitions.)
++
++    b) Use a suitable shared library mechanism for linking with the
++    Library.  A suitable mechanism is one that (1) uses at run time a
++    copy of the library already present on the user's computer system,
++    rather than copying library functions into the executable, and (2)
++    will operate properly with a modified version of the library, if
++    the user installs one, as long as the modified version is
++    interface-compatible with the version that the work was made with.
++
++    c) Accompany the work with a written offer, valid for at
++    least three years, to give the same user the materials
++    specified in Subsection 6a, above, for a charge no more
++    than the cost of performing this distribution.
++
++    d) If distribution of the work is made by offering access to copy
++    from a designated place, offer equivalent access to copy the above
++    specified materials from the same place.
++
++    e) Verify that the user has already received a copy of these
++    materials or that you have already sent this user a copy.
++
++  For an executable, the required form of the "work that uses the
++Library" must include any data and utility programs needed for
++reproducing the executable from it.  However, as a special exception,
++the materials to be distributed need not include anything that is
++normally distributed (in either source or binary form) with the major
++components (compiler, kernel, and so on) of the operating system on
++which the executable runs, unless that component itself accompanies
++the executable.
++
++  It may happen that this requirement contradicts the license
++restrictions of other proprietary libraries that do not normally
++accompany the operating system.  Such a contradiction means you cannot
++use both them and the Library together in an executable that you
++distribute.
++
++  7. You may place library facilities that are a work based on the
++Library side-by-side in a single library together with other library
++facilities not covered by this License, and distribute such a combined
++library, provided that the separate distribution of the work based on
++the Library and of the other library facilities is otherwise
++permitted, and provided that you do these two things:
++
++    a) Accompany the combined library with a copy of the same work
++    based on the Library, uncombined with any other library
++    facilities.  This must be distributed under the terms of the
++    Sections above.
++
++    b) Give prominent notice with the combined library of the fact
++    that part of it is a work based on the Library, and explaining
++    where to find the accompanying uncombined form of the same work.
++
++  8. You may not copy, modify, sublicense, link with, or distribute
++the Library except as expressly provided under this License.  Any
++attempt otherwise to copy, modify, sublicense, link with, or
++distribute the Library is void, and will automatically terminate your
++rights under this License.  However, parties who have received copies,
++or rights, from you under this License will not have their licenses
++terminated so long as such parties remain in full compliance.
++
++  9. You are not required to accept this License, since you have not
++signed it.  However, nothing else grants you permission to modify or
++distribute the Library or its derivative works.  These actions are
++prohibited by law if you do not accept this License.  Therefore, by
++modifying or distributing the Library (or any work based on the
++Library), you indicate your acceptance of this License to do so, and
++all its terms and conditions for copying, distributing or modifying
++the Library or works based on it.
++
++  10. Each time you redistribute the Library (or any work based on the
++Library), the recipient automatically receives a license from the
++original licensor to copy, distribute, link with or modify the Library
++subject to these terms and conditions.  You may not impose any further
++restrictions on the recipients' exercise of the rights granted herein.
++You are not responsible for enforcing compliance by third parties with
++this License.
++
++  11. If, as a consequence of a court judgment or allegation of patent
++infringement or for any other reason (not limited to patent issues),
++conditions are imposed on you (whether by court order, agreement or
++otherwise) that contradict the conditions of this License, they do not
++excuse you from the conditions of this License.  If you cannot
++distribute so as to satisfy simultaneously your obligations under this
++License and any other pertinent obligations, then as a consequence you
++may not distribute the Library at all.  For example, if a patent
++license would not permit royalty-free redistribution of the Library by
++all those who receive copies directly or indirectly through you, then
++the only way you could satisfy both it and this License would be to
++refrain entirely from distribution of the Library.
++
++If any portion of this section is held invalid or unenforceable under any
++particular circumstance, the balance of the section is intended to apply,
++and the section as a whole is intended to apply in other circumstances.
++
++It is not the purpose of this section to induce you to infringe any
++patents or other property right claims or to contest validity of any
++such claims; this section has the sole purpose of protecting the
++integrity of the free software distribution system which is
++implemented by public license practices.  Many people have made
++generous contributions to the wide range of software distributed
++through that system in reliance on consistent application of that
++system; it is up to the author/donor to decide if he or she is willing
++to distribute software through any other system and a licensee cannot
++impose that choice.
++
++This section is intended to make thoroughly clear what is believed to
++be a consequence of the rest of this License.
++
++  12. If the distribution and/or use of the Library is restricted in
++certain countries either by patents or by copyrighted interfaces, the
++original copyright holder who places the Library under this License may add
++an explicit geographical distribution limitation excluding those countries,
++so that distribution is permitted only in or among countries not thus
++excluded.  In such case, this License incorporates the limitation as if
++written in the body of this License.
++
++  13. The Free Software Foundation may publish revised and/or new
++versions of the Lesser General Public License from time to time.
++Such new versions will be similar in spirit to the present version,
++but may differ in detail to address new problems or concerns.
++
++Each version is given a distinguishing version number.  If the Library
++specifies a version number of this License which applies to it and
++"any later version", you have the option of following the terms and
++conditions either of that version or of any later version published by
++the Free Software Foundation.  If the Library does not specify a
++license version number, you may choose any version ever published by
++the Free Software Foundation.
++
++  14. If you wish to incorporate parts of the Library into other free
++programs whose distribution conditions are incompatible with these,
++write to the author to ask for permission.  For software which is
++copyrighted by the Free Software Foundation, write to the Free
++Software Foundation; we sometimes make exceptions for this.  Our
++decision will be guided by the two goals of preserving the free status
++of all derivatives of our free software and of promoting the sharing
++and reuse of software generally.
++
++                            NO WARRANTY
++
++  15. BECAUSE THE LIBRARY IS LICENSED FREE OF CHARGE, THERE IS NO
++WARRANTY FOR THE LIBRARY, TO THE EXTENT PERMITTED BY APPLICABLE LAW.
++EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR
++OTHER PARTIES PROVIDE THE LIBRARY "AS IS" WITHOUT WARRANTY OF ANY
++KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE
++IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
++PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE
++LIBRARY IS WITH YOU.  SHOULD THE LIBRARY PROVE DEFECTIVE, YOU ASSUME
++THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
++
++  16. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN
++WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY
++AND/OR REDISTRIBUTE THE LIBRARY AS PERMITTED ABOVE, BE LIABLE TO YOU
++FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR
++CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE
++LIBRARY (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING
++RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
++FAILURE OF THE LIBRARY TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
++SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
++DAMAGES.
++
++                     END OF TERMS AND CONDITIONS
++
++           How to Apply These Terms to Your New Libraries
++
++  If you develop a new library, and you want it to be of the greatest
++possible use to the public, we recommend making it free software that
++everyone can redistribute and change.  You can do so by permitting
++redistribution under these terms (or, alternatively, under the terms of the
++ordinary General Public License).
++
++  To apply these terms, attach the following notices to the library.  It is
++safest to attach them to the start of each source file to most effectively
++convey the exclusion of warranty; and each file should have at least the
++"copyright" line and a pointer to where the full notice is found.
++
++    <one line to give the library's name and a brief idea of what it does.>
++    Copyright (C) <year>  <name of author>
++
++    This library is free software; you can redistribute it and/or
++    modify it under the terms of the GNU Lesser General Public
++    License as published by the Free Software Foundation; either
++    version 2.1 of the License, or (at your option) any later version.
++
++    This library is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++    Lesser General Public License for more details.
++
++    You should have received a copy of the GNU Lesser General Public
++    License along with this library; if not, write to the Free Software
++    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
++
++Also add information on how to contact you by electronic and paper mail.
++
++You should also get your employer (if you work as a programmer) or your
++school, if any, to sign a "copyright disclaimer" for the library, if
++necessary.  Here is a sample; alter the names:
++
++  Yoyodyne, Inc., hereby disclaims all copyright interest in the
++  library `Frob' (a library for tweaking knobs) written by James Random Hacker.
++
++  <signature of Ty Coon>, 1 April 1990
++  Ty Coon, President of Vice
++
++That's all there is to it!
+diff --git a/NOTICE b/NOTICE
+new file mode 100644
+index 0000000..daef6a1
+--- /dev/null
++++ b/NOTICE
+@@ -0,0 +1,4 @@
++Copyright (c) 2012 Samsung Electronics Co., Ltd. All rights reserved.
++Except as noted, this software is licensed under GNU LESSER GENERAL PUBLIC
++LICENSE Version 2.1. Please, see the LICENSE.LGPLv2.1 file for
++GNU LESSER GENERAL PUBLIC LICENSE terms and conditions.
+diff --git a/alsa-scenario-scn-data-0-msm8x16-skui-snd-card.manifest b/alsa-scenario-scn-data-0-msm8x16-skui-snd-card.manifest
+new file mode 100644
+index 0000000..a76fdba
+--- /dev/null
++++ b/alsa-scenario-scn-data-0-msm8x16-skui-snd-card.manifest
+@@ -0,0 +1,5 @@
++<manifest>
++	<request>
++		<domain name="_" />
++	</request>
++</manifest>
+diff --git a/msm8x16-skui-snd-card.conf b/msm8x16-skui-snd-card.conf
+new file mode 100644
+index 0000000..e24c73f
+--- /dev/null
++++ b/msm8x16-skui-snd-card.conf
+@@ -0,0 +1,358 @@
++Section "Scenario"
++	Identifier = "reset"
++	File = "val_reset"
++	PreSequenceFile = "seq_reset"
++EndSection
++
++Section "Scenario"
++	Identifier = "reset_playback"
++	File = "val_reset_playback"
++	PreSequenceFile = "seq_reset_playback"
++EndSection
++
++Section "Scenario"
++	Identifier = "reset_capture"
++	File = "val_reset_capture"
++	PreSequenceFile = "seq_reset_capture"
++EndSection
++
++Section "Scenario"
++	Identifier = "mute_playback"
++	File = "val_mute_playback"
++	PreSequenceFile = "seq_mute_playback"
++EndSection
++
++Section "Scenario"
++	Identifier = "unmute_playback"
++	File = "val_unmute_playback"
++	PreSequenceFile = "seq_mute_playback"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_speaker"
++	File = "val_ap_speaker"
++	PreSequenceFile = "seq_ap_speaker"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_speaker_left"
++	File = "val_ap_speaker_left"
++	PreSequenceFile = "seq_ap_speaker_left"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_speaker_right"
++	File = "val_ap_speaker_right"
++	PreSequenceFile = "seq_ap_speaker_right"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_speaker_gain"
++	File = "val_ap_speaker_gain"
++	PreSequenceFile = "seq_ap_speaker_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_speaker_ringtone_gain"
++	File = "val_ap_speaker_ringtone_gain"
++	PreSequenceFile = "seq_ap_speaker_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_headset"
++	File = "val_ap_headset"
++	PreSequenceFile = "seq_ap_headset"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_headset_gain"
++	File = "val_ap_headset_gain"
++	PreSequenceFile = "seq_ap_headset_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_headset_ringtone_gain"
++	File = "val_ap_headset_ringtone_gain"
++	PreSequenceFile = "seq_ap_headset_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_receiver"
++	File = "val_ap_receiver"
++	PreSequenceFile = "seq_ap_receiver"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_receiver_gain"
++	File = "val_ap_receiver_gain"
++	PreSequenceFile = "seq_ap_receiver_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_dock"
++	File = "val_ap_dock"
++	PreSequenceFile = "seq_ap_dock"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_dock_gain"
++	File = "val_ap_dock_gain"
++	PreSequenceFile = "seq_ap_dock_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_bt"
++	File = "val_ap_bt"
++	PreSequenceFile = "seq_ap_bt"
++EndSection
++
++Section "Scenario"
++	Identifier = "ap_to_bt_gain"
++	File = "val_ap_bt_gain"
++	PreSequenceFile = "seq_ap_bt_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "bt_to_cp"
++	File = "val_bt_cp"
++	PreSequenceFile = "seq_bt_cp"
++EndSection
++
++Section "Scenario"
++	Identifier = "bt_to_cp_gain"
++	File = "val_bt_cp_gain"
++	PreSequenceFile = "seq_bt_cp_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "bt_to_ap"
++	File = "val_bt_ap"
++	PreSequenceFile = "seq_bt_ap"
++EndSection
++
++Section "Scenario"
++	Identifier = "bt_to_ap_gain"
++	File = "val_bt_ap_gain"
++	PreSequenceFile = "seq_bt_ap_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_speaker"
++	File = "val_cp_speaker"
++	PreSequenceFile = "seq_cp_speaker"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_speaker_gain"
++	File = "val_cp_speaker_gain"
++	PreSequenceFile = "seq_cp_speaker_gain"
++EndSection
++Section "Scenario"
++	Identifier = "cp_to_speaker_voicecall_gain"
++	File = "val_cp_speaker_voicecall_gain"
++	PreSequenceFile = "seq_cp_speaker_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_speaker_videocall_gain"
++	File = "val_cp_speaker_videocall_gain"
++	PreSequenceFile = "seq_cp_speaker_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_headset"
++	File = "val_cp_headset"
++	PreSequenceFile = "seq_cp_headset"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_headset_gain"
++	File = "val_cp_headset_gain"
++	PreSequenceFile = "seq_cp_headset_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_headset_voicecall_gain"
++	File = "val_cp_headset_voicecall_gain"
++	PreSequenceFile = "seq_cp_headset_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_headset_videocall_gain"
++	File = "val_cp_headset_videocall_gain"
++	PreSequenceFile = "seq_cp_headset_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_receiver"
++	File = "val_cp_receiver"
++	PreSequenceFile = "seq_cp_receiver"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_receiver_gain"
++	File = "val_cp_receiver_gain"
++	PreSequenceFile = "seq_cp_receiver_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_receiver_voicecall_gain"
++	File = "val_cp_receiver_voicecall_gain"
++	PreSequenceFile = "seq_cp_receiver_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_receiver_videocall_gain"
++	File = "val_cp_receiver_videocall_gain"
++	PreSequenceFile = "seq_cp_receiver_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_ap"
++	File = "val_cp_ap"
++	PreSequenceFile = "seq_cp_ap"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_ap_gain"
++	File = "val_cp_ap_gain"
++	PreSequenceFile = "seq_cp_ap_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_bt"
++	File = "val_cp_bt"
++	PreSequenceFile = "seq_cp_bt"
++EndSection
++
++Section "Scenario"
++	Identifier = "cp_to_bt_gain"
++	File = "val_cp_bt_gain"
++	PreSequenceFile = "seq_cp_bt_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "codec_disable_on_suspend"
++	File = "val_codec_disable_on_suspend"
++	PreSequenceFile = "seq_codec_disable_on_suspend"
++EndSection
++
++Section "Scenario"
++	Identifier = "fmradio_to_speaker"
++	File = "val_fmradio_speaker"
++	PreSequenceFile = "seq_fmradio_speaker"
++EndSection
++
++Section "Scenario"
++	Identifier = "fmradio_to_speaker_gain"
++	File = "val_fmradio_speaker_gain"
++	PreSequenceFile = "seq_fmradio_speaker_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "fmradio_to_headset"
++	File = "val_fmradio_headset"
++	PreSequenceFile = "seq_fmradio_headset"
++EndSection
++
++Section "Scenario"
++	Identifier = "fmradio_to_headset_gain"
++	File = "val_fmradio_headset_gain"
++	PreSequenceFile = "seq_fmradio_headset_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "mainmic_to_ap"
++	File = "val_mainmic_ap"
++	PreSequenceFile = "seq_mainmic_ap"
++EndSection
++
++Section "Scenario"
++	Identifier = "mainmic_to_ap_gain"
++	File = "val_mainmic_ap_gain"
++	PreSequenceFile = "seq_mainmic_ap_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "mainmic_to_cp"
++	File = "val_mainmic_cp"
++	PreSequenceFile = "seq_mainmic_cp"
++EndSection
++
++Section "Scenario"
++	Identifier = "mainmic_to_cp_gain"
++	File = "val_mainmic_cp_gain"
++	PreSequenceFile = "seq_mainmic_cp_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "earmic_to_ap"
++	File = "val_earmic_ap"
++	PreSequenceFile = "seq_earmic_ap"
++EndSection
++
++Section "Scenario"
++	Identifier = "earmic_to_ap_gain"
++	File = "val_earmic_ap_gain"
++	PreSequenceFile = "seq_earmic_ap_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "earmic_to_cp"
++	File = "val_earmic_cp"
++	PreSequenceFile = "seq_earmic_cp"
++EndSection
++
++Section "Scenario"
++	Identifier = "earmic_to_cp_gain"
++	File = "val_earmic_cp_gain"
++	PreSequenceFile = "seq_earmic_cp_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "submic_to_ap"
++	File = "val_submic_ap"
++	PreSequenceFile = "seq_submic_ap"
++EndSection
++
++Section "Scenario"
++	Identifier = "submic_to_ap_gain"
++	File = "val_submic_ap_gain"
++	PreSequenceFile = "seq_submic_ap_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "submic_to_cp"
++	File = "val_submic_cp"
++	PreSequenceFile = "seq_submic_cp"
++EndSection
++
++Section "Scenario"
++	Identifier = "submic_to_cp_gain"
++	File = "val_submic_cp_gain"
++	PreSequenceFile = "seq_submic_cp_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "stereomic_to_ap"
++	File = "val_stereomic_ap"
++	PreSequenceFile = "seq_stereomic_ap"
++EndSection
++
++Section "Scenario"
++	Identifier = "stereomic_to_ap_gain"
++	File = "val_stereomic_ap_gain"
++	PreSequenceFile = "seq_stereomic_ap_gain"
++EndSection
++
++Section "Scenario"
++	Identifier = "fmradio_to_ap"
++	File = "val_fmradio_ap"
++	PreSequenceFile = "seq_fmradio_ap"
++EndSection
++
++Section "Scenario"
++	Identifier = "fmradio_to_ap_gain"
++	File = "val_fmradio_ap_gain"
++	PreSequenceFile = "seq_fmradio_ap_gain"
++EndSection
+diff --git a/msm8x16-skui-snd-card/seq_ap_bt b/msm8x16-skui-snd-card/seq_ap_bt
+new file mode 100644
+index 0000000..d8e6425
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_bt
+@@ -0,0 +1,7 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DIT2 SRC" = "1"
++kcontrol "DIGITAL MIXER Dir0 Switch" = "1"
++kcontrol "DIR#0 ATT Switch" = "1"
++kcontrol "DIR#0 Switch" = "1"
++kcontrol "DIT#2 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_ap_bt_gain b/msm8x16-skui-snd-card/seq_ap_bt_gain
+new file mode 100644
+index 0000000..8bb569c
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_bt_gain
+@@ -0,0 +1,5 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DIR#0 ATT Volume" = "1"
++kcontrol "DIR#0 Volume" = "1"
++kcontrol "DIT#2 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_ap_dock b/msm8x16-skui-snd-card/seq_ap_dock
+new file mode 100644
+index 0000000..0ce5ae1
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_dock
+@@ -0,0 +1,13 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DACMAIN SRC" = "1"
++kcontrol "DACVOICE SRC" = "1"
++kcontrol "DIGITAL MIXER Dir0 Switch" = "1"
++kcontrol "DIR#0 ATT Switch" = "1"
++kcontrol "DIR#0 Switch" = "1"
++kcontrol "Voice Playback Switch" = "1"
++kcontrol "Master Playback Switch" = "1"
++kcontrol "DAC Playback Switch" = "1"
++kcontrol "LINEOUT1L MIXER Dac Switch" = "1"
++kcontrol "LINEOUT1R MIXER DacR Switch" = "1"
++kcontrol "Line 1 Playback Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_ap_dock_gain b/msm8x16-skui-snd-card/seq_ap_dock_gain
+new file mode 100644
+index 0000000..737b2e7
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_dock_gain
+@@ -0,0 +1,9 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "DAC Playback Volume" = "1"
++kcontrol "Voice Playback Volume" = "1"
++kcontrol "DIR#0 ATT Volume" = "1"
++kcontrol "DIR#0 Volume" = "1"
++kcontrol "Line 1 Playback Volume" = "1"
++kcontrol "HP Gain Playback Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_ap_headset b/msm8x16-skui-snd-card/seq_ap_headset
+new file mode 100644
+index 0000000..e8cfcfc
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_headset
+@@ -0,0 +1,13 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DACMAIN SRC" = "1"
++kcontrol "DACVOICE SRC" = "1"
++kcontrol "DIGITAL MIXER Dir0 Switch" = "1"
++kcontrol "DIR#0 ATT Switch" = "1"
++kcontrol "DIR#0 Switch" = "1"
++kcontrol "Voice Playback Switch" = "1"
++kcontrol "Master Playback Switch" = "1"
++kcontrol "DAC Playback Switch" = "1"
++kcontrol "HPL MIXER Dac Switch" = "1"
++kcontrol "HPR MIXER DacR Switch" = "1"
++kcontrol "Headphone Playback Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_ap_headset_gain b/msm8x16-skui-snd-card/seq_ap_headset_gain
+new file mode 100644
+index 0000000..bd836b2
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_headset_gain
+@@ -0,0 +1,9 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "DAC Playback Volume" = "1"
++kcontrol "Voice Playback Volume" = "1"
++kcontrol "DIR#0 ATT Volume" = "1"
++kcontrol "DIR#0 Volume" = "1"
++kcontrol "Headphone Playback Volume" = "1"
++kcontrol "HP Gain Playback Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_ap_receiver b/msm8x16-skui-snd-card/seq_ap_receiver
+new file mode 100644
+index 0000000..41bf109
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_receiver
+@@ -0,0 +1,13 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DACMAIN SRC" = "1"
++kcontrol "DACVOICE SRC" = "1"
++kcontrol "DIGITAL MIXER Dir0 Switch" = "1"
++kcontrol "DIR#0 ATT Switch" = "1"
++kcontrol "DIR#0 Switch" = "1"
++kcontrol "Voice Playback Switch" = "1"
++kcontrol "Master Playback Switch" = "1"
++kcontrol "DAC Playback Switch" = "1"
++kcontrol "RC MIXER DacL Switch" = "1"
++kcontrol "RC MIXER DacR Switch" = "1"
++kcontrol "Receiver Playback Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_ap_receiver_gain b/msm8x16-skui-snd-card/seq_ap_receiver_gain
+new file mode 100644
+index 0000000..ca0618a
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_receiver_gain
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "DAC Playback Volume" = "1"
++kcontrol "Voice Playback Volume" = "1"
++kcontrol "DIR#0 ATT Volume" = "1"
++kcontrol "DIR#0 Volume" = "1"
++kcontrol "Receiver Playback Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_ap_speaker b/msm8x16-skui-snd-card/seq_ap_speaker
+new file mode 100644
+index 0000000..f675ce2
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_speaker
+@@ -0,0 +1,15 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DACMAIN SRC" = "1"
++kcontrol "DACVOICE SRC" = "1"
++kcontrol "DIGITAL MIXER Dir0 Switch" = "1"
++kcontrol "DIR#0 ATT Switch" = "1"
++kcontrol "DIR#0 Switch" = "1"
++kcontrol "Voice Playback Switch" = "1"
++kcontrol "Master Playback Switch" = "1"
++kcontrol "DAC Playback Switch" = "1"
++kcontrol "SPL DAC MIXMODE" = "1"
++kcontrol "SPR DAC MIXMODE" = "1"
++kcontrol "SPL MIXER Dac Switch" = "1"
++kcontrol "SPR MIXER Dac Switch" = "1"
++kcontrol "Speaker Playback Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_ap_speaker_gain b/msm8x16-skui-snd-card/seq_ap_speaker_gain
+new file mode 100644
+index 0000000..6f915cd
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_speaker_gain
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "DAC Playback Volume" = "1"
++kcontrol "Voice Playback Volume" = "1"
++kcontrol "DIR#0 ATT Volume" = "1"
++kcontrol "DIR#0 Volume" = "1"
++kcontrol "Speaker Playback Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_ap_speaker_left b/msm8x16-skui-snd-card/seq_ap_speaker_left
+new file mode 100644
+index 0000000..7cfe8cb
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_speaker_left
+@@ -0,0 +1,3 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_ap_speaker_right b/msm8x16-skui-snd-card/seq_ap_speaker_right
+new file mode 100644
+index 0000000..7cfe8cb
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_ap_speaker_right
+@@ -0,0 +1,3 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_bt_ap b/msm8x16-skui-snd-card/seq_bt_ap
+new file mode 100644
+index 0000000..91a1145
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_bt_ap
+@@ -0,0 +1,7 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DIT0 SRC" = "1"
++kcontrol "DIGITAL MIXER Dir2 Switch" = "1"
++kcontrol "DIR#2 ATT Switch" = "1"
++kcontrol "DIR#2 Switch" = "1"
++kcontrol "DIT#0 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_bt_ap_gain b/msm8x16-skui-snd-card/seq_bt_ap_gain
+new file mode 100644
+index 0000000..8e275b3
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_bt_ap_gain
+@@ -0,0 +1,5 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DIR#2 ATT Volume" = "1"
++kcontrol "DIR#2 Volume" = "1"
++kcontrol "DIT#0 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_bt_cp b/msm8x16-skui-snd-card/seq_bt_cp
+new file mode 100644
+index 0000000..9820a1b
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_bt_cp
+@@ -0,0 +1,6 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DIT1 SRC" = "1"
++kcontrol "DIGITAL MIXER Dir2 Switch" = "1"
++kcontrol "DIR#2 Switch" = "1"
++kcontrol "DIT#1 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+diff --git a/msm8x16-skui-snd-card/seq_bt_cp_gain b/msm8x16-skui-snd-card/seq_bt_cp_gain
+new file mode 100644
+index 0000000..21018b8
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_bt_cp_gain
+@@ -0,0 +1,5 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DIR#2 ATT Volume" = "1"
++kcontrol "DIR#2 Volume" = "1"
++kcontrol "DIT#1 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_codec_disable_on_suspend b/msm8x16-skui-snd-card/seq_codec_disable_on_suspend
+new file mode 100644
+index 0000000..dbc4ca7
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_codec_disable_on_suspend
+@@ -0,0 +1,3 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Enable on Suspend" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_cp_ap b/msm8x16-skui-snd-card/seq_cp_ap
+new file mode 100644
+index 0000000..7738de9
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_cp_ap
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DIT0 SRC" = "1"
++kcontrol "DIGITAL MIXER Dir1 Switch" = "1"
++kcontrol "DIR#1 ATT Switch" = "1"
++kcontrol "DIR#1 Switch" = "1"
++kcontrol "DIT#0 Capture Switch" = "1"
++kcontrol "Enable on Suspend" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_cp_ap_gain b/msm8x16-skui-snd-card/seq_cp_ap_gain
+new file mode 100644
+index 0000000..5422053
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_cp_ap_gain
+@@ -0,0 +1,5 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DIR#1 ATT Volume" = "1"
++kcontrol "DIR#1 Volume" = "1"
++kcontrol "DIT#0 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_cp_bt b/msm8x16-skui-snd-card/seq_cp_bt
+new file mode 100644
+index 0000000..d8652bd
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_cp_bt
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DIT2 SRC" = "1"
++kcontrol "DIGITAL MIXER Dir1 Switch" = "1"
++kcontrol "DIR#1 ATT Switch" = "1"
++kcontrol "DIR#1 Switch" = "1"
++kcontrol "DIT#2 Capture Switch" = "1"
++kcontrol "Enable on Suspend" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_cp_bt_gain b/msm8x16-skui-snd-card/seq_cp_bt_gain
+new file mode 100644
+index 0000000..295198b
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_cp_bt_gain
+@@ -0,0 +1,5 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DIR#1 ATT Volume" = "1"
++kcontrol "DIR#1 Volume" = "1"
++kcontrol "DIT#2 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_cp_headset b/msm8x16-skui-snd-card/seq_cp_headset
+new file mode 100644
+index 0000000..3db9db4
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_cp_headset
+@@ -0,0 +1,14 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DACMAIN SRC" = "1"
++kcontrol "DACVOICE SRC" = "1"
++kcontrol "DIGITAL MIXER Dir1 Switch" = "1"
++kcontrol "DIR#1 ATT Switch" = "1"
++kcontrol "DIR#1 Switch" = "1"
++kcontrol "Voice Playback Switch" = "1"
++kcontrol "Master Playback Switch" = "1"
++kcontrol "DAC Playback Switch" = "1"
++kcontrol "HPL MIXER Dac Switch" = "1"
++kcontrol "HPR MIXER DacR Switch" = "1"
++kcontrol "Headphone Playback Switch" = "1"
++kcontrol "Enable on Suspend" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_cp_headset_gain b/msm8x16-skui-snd-card/seq_cp_headset_gain
+new file mode 100644
+index 0000000..b1acc73
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_cp_headset_gain
+@@ -0,0 +1,9 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "DAC Playback Volume" = "1"
++kcontrol "Voice Playback Volume" = "1"
++kcontrol "DIR#1 ATT Volume" = "1"
++kcontrol "DIR#1 Volume" = "1"
++kcontrol "Headphone Playback Volume" = "1"
++kcontrol "HP Gain Playback Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_cp_receiver b/msm8x16-skui-snd-card/seq_cp_receiver
+new file mode 100644
+index 0000000..b281f94
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_cp_receiver
+@@ -0,0 +1,14 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DACMAIN SRC" = "1"
++kcontrol "DACVOICE SRC" = "1"
++kcontrol "DIGITAL MIXER Dir1 Switch" = "1"
++kcontrol "DIR#1 ATT Switch" = "1"
++kcontrol "DIR#1 Switch" = "1"
++kcontrol "Voice Playback Switch" = "1"
++kcontrol "Master Playback Switch" = "1"
++kcontrol "DAC Playback Switch" = "1"
++kcontrol "RC MIXER DacL Switch" = "1"
++kcontrol "RC MIXER DacR Switch" = "1"
++kcontrol "Receiver Playback Switch" = "1"
++kcontrol "Enable on Suspend" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_cp_receiver_gain b/msm8x16-skui-snd-card/seq_cp_receiver_gain
+new file mode 100644
+index 0000000..daccbdc
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_cp_receiver_gain
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "DAC Playback Volume" = "1"
++kcontrol "Voice Playback Volume" = "1"
++kcontrol "DIR#1 ATT Volume" = "1"
++kcontrol "DIR#1 Volume" = "1"
++kcontrol "Receiver Playback Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_cp_speaker b/msm8x16-skui-snd-card/seq_cp_speaker
+new file mode 100644
+index 0000000..260fe7d
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_cp_speaker
+@@ -0,0 +1,16 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DACMAIN SRC" = "1"
++kcontrol "DACVOICE SRC" = "1"
++kcontrol "DIGITAL MIXER Dir1 Switch" = "1"
++kcontrol "DIR#1 ATT Switch" = "1"
++kcontrol "DIR#1 Switch" = "1"
++kcontrol "Voice Playback Switch" = "1"
++kcontrol "Master Playback Switch" = "1"
++kcontrol "DAC Playback Switch" = "1"
++kcontrol "SPL MIXER Dac Switch" = "1"
++kcontrol "SPR MIXER Dac Switch" = "1"
++kcontrol "Speaker Playback Switch" = "1"
++kcontrol "SPL DAC MIXMODE" = "1"
++kcontrol "SPR DAC MIXMODE" = "1"
++kcontrol "Enable on Suspend" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_cp_speaker_gain b/msm8x16-skui-snd-card/seq_cp_speaker_gain
+new file mode 100644
+index 0000000..f40067c
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_cp_speaker_gain
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "DAC Playback Volume" = "1"
++kcontrol "Voice Playback Volume" = "1"
++kcontrol "DIR#1 ATT Volume" = "1"
++kcontrol "DIR#1 Volume" = "1"
++kcontrol "Speaker Playback Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_earmic_ap b/msm8x16-skui-snd-card/seq_earmic_ap
+new file mode 100644
+index 0000000..db25d92
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_earmic_ap
+@@ -0,0 +1,13 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "ADC PDM SEL" = "1"
++kcontrol "AD ATT Switch" = "1"
++kcontrol "AD Analog Switch" = "1"
++kcontrol "AD Digital Switch" = "1"
++kcontrol "AE SRC" = "1"
++kcontrol "AENG6 Switch" = "1"
++kcontrol "MB2 Switch" = "1"
++kcontrol "ADCL MIXER Mic2 Switch" = "1"
++kcontrol "ADCR MIXER Mic2 Switch" = "1"
++kcontrol "DIT0 SRC" = "1"
++kcontrol "DIT#0 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_earmic_ap_gain b/msm8x16-skui-snd-card/seq_earmic_ap_gain
+new file mode 100644
+index 0000000..8a399bb
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_earmic_ap_gain
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "AD ATT Volume" = "1"
++kcontrol "AD Analog Volume" = "1"
++kcontrol "AD Digital Volume" = "1"
++kcontrol "AENG6 Volume" = "1"
++kcontrol "Mic 2 Gain Volume" = "1"
++kcontrol "DIT#0 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_earmic_cp b/msm8x16-skui-snd-card/seq_earmic_cp
+new file mode 100644
+index 0000000..c490342
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_earmic_cp
+@@ -0,0 +1,13 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "ADC PDM SEL" = "1"
++kcontrol "AD ATT Switch" = "1"
++kcontrol "AD Analog Switch" = "1"
++kcontrol "AD Digital Switch" = "1"
++kcontrol "AE SRC" = "1"
++kcontrol "AENG6 Switch" = "1"
++kcontrol "MB2 Switch" = "1"
++kcontrol "ADCL MIXER Mic2 Switch" = "1"
++kcontrol "ADCR MIXER Mic2 Switch" = "1"
++kcontrol "DIT1 SRC" = "1"
++kcontrol "DIT#1 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_earmic_cp_gain b/msm8x16-skui-snd-card/seq_earmic_cp_gain
+new file mode 100644
+index 0000000..4b98e49
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_earmic_cp_gain
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "AD ATT Volume" = "1"
++kcontrol "AD Analog Volume" = "1"
++kcontrol "AD Digital Volume" = "1"
++kcontrol "AENG6 Volume" = "1"
++kcontrol "Mic 2 Gain Volume" = "1"
++kcontrol "DIT#1 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_fmradio_ap b/msm8x16-skui-snd-card/seq_fmradio_ap
+new file mode 100644
+index 0000000..225dfad
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_fmradio_ap
+@@ -0,0 +1,11 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "ADC PDM SEL" = "1"
++kcontrol "AD Analog Switch" = "1"
++kcontrol "AD Digital Switch" = "1"
++kcontrol "AENG6 Switch" = "1"
++kcontrol "AD ATT Switch" = "1"
++kcontrol "ADCL MIXER Line Switch" = "1"
++kcontrol "ADCR MIXER Line Switch" = "1"
++kcontrol "DIT0 SRC" = "1"
++kcontrol "DIT#0 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+diff --git a/msm8x16-skui-snd-card/seq_fmradio_ap_gain b/msm8x16-skui-snd-card/seq_fmradio_ap_gain
+new file mode 100644
+index 0000000..2c36d53
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_fmradio_ap_gain
+@@ -0,0 +1,7 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "AD ATT Volume" = "1"
++kcontrol "AD Analog Volume" = "1"
++kcontrol "AD Digital Volume" = "1"
++kcontrol "AENG6 Volume" = "1"
++kcontrol "DIT#0 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+diff --git a/msm8x16-skui-snd-card/seq_fmradio_headset b/msm8x16-skui-snd-card/seq_fmradio_headset
+new file mode 100644
+index 0000000..000cd63
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_fmradio_headset
+@@ -0,0 +1,15 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Line 1 Playback Switch" = "1"
++kcontrol "Line 1 Playback Volume" = "1"
++kcontrol "Line 2 Playback Switch" = "1"
++kcontrol "Line 2 Playback Volume" = "1"
++kcontrol "Line Bypass Playback Switch" = "1"
++kcontrol "Line Bypass Playback Volume" = "1"
++kcontrol "HPL LINE MIXMODE" = "1"
++kcontrol "HPL MIXER Line Switch" = "1"
++kcontrol "HPR MIXER LineR Switch" = "1"
++kcontrol "Headphone Playback Switch" = "1"
++kcontrol "Headphone Playback Volume" = "1"
++kcontrol "HP Gain Playback Volume" = "1"
++kcontrol "Enable on Suspend" = "1"
++kcontrol "Disable Codec" = "1"
+diff --git a/msm8x16-skui-snd-card/seq_fmradio_headset_gain b/msm8x16-skui-snd-card/seq_fmradio_headset_gain
+new file mode 100644
+index 0000000..7cfe8cb
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_fmradio_headset_gain
+@@ -0,0 +1,3 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_fmradio_speaker b/msm8x16-skui-snd-card/seq_fmradio_speaker
+new file mode 100644
+index 0000000..6ed703f
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_fmradio_speaker
+@@ -0,0 +1,17 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Line 1 Playback Switch" = "1"
++kcontrol "Line 1 Playback Volume" = "1"
++kcontrol "Line 2 Playback Switch" = "1"
++kcontrol "Line 2 Playback Volume" = "1"
++kcontrol "Line Bypass Playback Switch" = "1"
++kcontrol "Line Bypass Playback Volume" = "1"
++kcontrol "SPL LINE MIXMODE" = "1"
++kcontrol "SPR LINE MIXMODE" = "1"
++kcontrol "SPL MIXER Line Switch" = "1"
++kcontrol "SPR MIXER Line Switch" = "1"
++kcontrol "Speaker Playback Switch" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "DAC Playback Volume" = "1"
++kcontrol "Voice Playback Volume" = "1"
++kcontrol "Enable on Suspend" = "1"
++kcontrol "Disable Codec" = "1"
+diff --git a/msm8x16-skui-snd-card/seq_fmradio_speaker_gain b/msm8x16-skui-snd-card/seq_fmradio_speaker_gain
+new file mode 100644
+index 0000000..7cfe8cb
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_fmradio_speaker_gain
+@@ -0,0 +1,3 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_mainmic_ap b/msm8x16-skui-snd-card/seq_mainmic_ap
+new file mode 100644
+index 0000000..70803cf
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_mainmic_ap
+@@ -0,0 +1,13 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "ADC PDM SEL" = "1"
++kcontrol "AD ATT Switch" = "1"
++kcontrol "AD Analog Switch" = "1"
++kcontrol "AD Digital Switch" = "1"
++kcontrol "AE SRC" = "1"
++kcontrol "AENG6 Switch" = "1"
++kcontrol "MB1 Switch" = "1"
++kcontrol "ADCL MIXER Mic1 Switch" = "1"
++kcontrol "ADCR MIXER Mic1 Switch" = "1"
++kcontrol "DIT0 SRC" = "1"
++kcontrol "DIT#0 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_mainmic_ap_gain b/msm8x16-skui-snd-card/seq_mainmic_ap_gain
+new file mode 100644
+index 0000000..5f1404a
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_mainmic_ap_gain
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "AD ATT Volume" = "1"
++kcontrol "AD Analog Volume" = "1"
++kcontrol "AD Digital Volume" = "1"
++kcontrol "AENG6 Volume" = "1"
++kcontrol "Mic 1 Gain Volume" = "1"
++kcontrol "DIT#0 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_mainmic_cp b/msm8x16-skui-snd-card/seq_mainmic_cp
+new file mode 100644
+index 0000000..b573b75
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_mainmic_cp
+@@ -0,0 +1,13 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "ADC PDM SEL" = "1"
++kcontrol "AD ATT Switch" = "1"
++kcontrol "AD Analog Switch" = "1"
++kcontrol "AD Digital Switch" = "1"
++kcontrol "AE SRC" = "1"
++kcontrol "AENG6 Switch" = "1"
++kcontrol "MB1 Switch" = "1"
++kcontrol "ADCL MIXER Mic1 Switch" = "1"
++kcontrol "ADCR MIXER Mic1 Switch" = "1"
++kcontrol "DIT1 SRC" = "1"
++kcontrol "DIT#1 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_mainmic_cp_gain b/msm8x16-skui-snd-card/seq_mainmic_cp_gain
+new file mode 100644
+index 0000000..4cc54a3
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_mainmic_cp_gain
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "AD ATT Volume" = "1"
++kcontrol "AD Analog Volume" = "1"
++kcontrol "AD Digital Volume" = "1"
++kcontrol "AENG6 Volume" = "1"
++kcontrol "Mic 1 Gain Volume" = "1"
++kcontrol "DIT#1 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_mute_playback b/msm8x16-skui-snd-card/seq_mute_playback
+new file mode 100644
+index 0000000..604eac7
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_mute_playback
+@@ -0,0 +1,4 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "Master Playback Switch" = "1"
++kcontrol "DAC Playback Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_reset b/msm8x16-skui-snd-card/seq_reset
+new file mode 100644
+index 0000000..abe81c8
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_reset
+@@ -0,0 +1,57 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DACMAIN SRC" = "1"
++kcontrol "DACVOICE SRC" = "1"
++kcontrol "DIGITAL MIXER Dir0 Switch" = "1"
++kcontrol "DIR#0 ATT Switch" = "1"
++kcontrol "DIR#0 Switch" = "1"
++kcontrol "DIGITAL MIXER Dir1 Switch" = "1"
++kcontrol "DIR#1 ATT Switch" = "1"
++kcontrol "DIR#1 Switch" = "1"
++kcontrol "Voice Playback Switch" = "1"
++kcontrol "Master Playback Switch" = "1"
++kcontrol "DAC Playback Switch" = "1"
++kcontrol "SPL MIXER Dac Switch" = "1"
++kcontrol "SPR MIXER Dac Switch" = "1"
++kcontrol "SPL MIXER Line Switch" = "1"
++kcontrol "SPR MIXER Line Switch" = "1"
++kcontrol "Speaker Playback Switch" = "1"
++kcontrol "SPL DAC MIXMODE" = "1"
++kcontrol "SPR DAC MIXMODE" = "1"
++kcontrol "SPL LINE MIXMODE" = "1"
++kcontrol "SPR LINE MIXMODE" = "1"
++kcontrol "HPL MIXER Dac Switch" = "1"
++kcontrol "HPR MIXER DacR Switch" = "1"
++kcontrol "HPL LINE MIXMODE" = "1"
++kcontrol "HPL MIXER Line Switch" = "1"
++kcontrol "HPR MIXER LineR Switch" = "1"
++kcontrol "Headphone Playback Switch" = "1"
++kcontrol "RC MIXER DacL Switch" = "1"
++kcontrol "RC MIXER DacR Switch" = "1"
++kcontrol "Receiver Playback Switch" = "1"
++kcontrol "DIGITAL MIXER Adc Switch" = "1"
++kcontrol "ADC PDM SEL" = "1"
++kcontrol "AD ATT Switch" = "1"
++kcontrol "AD Analog Switch" = "1"
++kcontrol "AD Digital Switch" = "1"
++kcontrol "AE SRC" = "1"
++kcontrol "AENG6 Switch" = "1"
++kcontrol "MB1 Switch" = "1"
++kcontrol "ADCL MIXER Mic1 Switch" = "1"
++kcontrol "ADCR MIXER Mic1 Switch" = "1"
++kcontrol "MB2 Switch" = "1"
++kcontrol "ADCL MIXER Mic2 Switch" = "1"
++kcontrol "ADCR MIXER Mic2 Switch" = "1"
++kcontrol "MB3 Switch" = "1"
++kcontrol "ADCL MIXER Mic3 Switch" = "1"
++kcontrol "ADCR MIXER Mic3 Switch" = "1"
++kcontrol "ADCL MIXER Line Switch" = "1"
++kcontrol "ADCR MIXER Line Switch" = "1"
++kcontrol "DIT0 SRC" = "1"
++kcontrol "DIT#0 Capture Switch" = "1"
++kcontrol "DIT1 SRC" = "1"
++kcontrol "DIT#1 Capture Switch" = "1"
++kcontrol "Line 1 Playback Switch" = "1"
++kcontrol "Line 2 Playback Switch" = "1"
++kcontrol "Line Bypass Playback Switch" = "1"
++kcontrol "Enable on Suspend" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_reset_capture b/msm8x16-skui-snd-card/seq_reset_capture
+new file mode 100644
+index 0000000..0cc7e8a
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_reset_capture
+@@ -0,0 +1,22 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "ADC PDM SEL" = "1"
++kcontrol "AD ATT Switch" = "1"
++kcontrol "AD Analog Switch" = "1"
++kcontrol "AD Digital Switch" = "1"
++kcontrol "AE SRC" = "1"
++kcontrol "AENG6 Switch" = "1"
++kcontrol "MB1 Switch" = "1"
++kcontrol "ADCL MIXER Mic1 Switch" = "1"
++kcontrol "ADCR MIXER Mic1 Switch" = "1"
++kcontrol "DIT0 SRC" = "1"
++kcontrol "DIT#0 Capture Switch" = "1"
++kcontrol "DIT1 SRC" = "1"
++kcontrol "DIT#1 Capture Switch" = "1"
++kcontrol "MB2 Switch" = "1"
++kcontrol "ADCL MIXER Mic2 Switch" = "1"
++kcontrol "ADCR MIXER Mic2 Switch" = "1"
++kcontrol "DIT0 SRC" = "1"
++kcontrol "MB3 Switch" = "1"
++kcontrol "ADCL MIXER Mic3 Switch" = "1"
++kcontrol "ADCR MIXER Mic3 Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_reset_playback b/msm8x16-skui-snd-card/seq_reset_playback
+new file mode 100644
+index 0000000..e2266ce
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_reset_playback
+@@ -0,0 +1,23 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "DACMAIN SRC" = "1"
++kcontrol "DACVOICE SRC" = "1"
++kcontrol "DIGITAL MIXER Dir0 Switch" = "1"
++kcontrol "DIR#0 ATT Switch" = "1"
++kcontrol "DIR#0 Switch" = "1"
++kcontrol "Voice Playback Switch" = "1"
++kcontrol "Master Playback Switch" = "1"
++kcontrol "DAC Playback Switch" = "1"
++kcontrol "SPL MIXER Dac Switch" = "1"
++kcontrol "SPR MIXER Dac Switch" = "1"
++kcontrol "Speaker Playback Switch" = "1"
++kcontrol "SPL DAC MIXMODE" = "1"
++kcontrol "SPR DAC MIXMODE" = "1"
++kcontrol "HPL MIXER Dac Switch" = "1"
++kcontrol "HPR MIXER DacR Switch" = "1"
++kcontrol "Headphone Playback Switch" = "1"
++kcontrol "RC MIXER DacL Switch" = "1"
++kcontrol "RC MIXER DacR Switch" = "1"
++kcontrol "Receiver Playback Switch" = "1"
++kcontrol "DIT2 SRC" = "1"
++kcontrol "DIT#2 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_stereomic_ap b/msm8x16-skui-snd-card/seq_stereomic_ap
+new file mode 100644
+index 0000000..b39b072
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_stereomic_ap
+@@ -0,0 +1,14 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "ADC PDM SEL" = "1"
++kcontrol "AD ATT Switch" = "1"
++kcontrol "AD Analog Switch" = "1"
++kcontrol "AD Digital Switch" = "1"
++kcontrol "AE SRC" = "1"
++kcontrol "AENG6 Switch" = "1"
++kcontrol "MB1 Switch" = "1"
++kcontrol "MB3 Switch" = "1"
++kcontrol "ADCL MIXER Mic1 Switch" = "1"
++kcontrol "ADCR MIXER Mic3 Switch" = "1"
++kcontrol "DIT0 SRC" = "1"
++kcontrol "DIT#0 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_stereomic_ap_gain b/msm8x16-skui-snd-card/seq_stereomic_ap_gain
+new file mode 100644
+index 0000000..cf445a2
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_stereomic_ap_gain
+@@ -0,0 +1,9 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "AD ATT Volume" = "1"
++kcontrol "AD Analog Volume" = "1"
++kcontrol "AD Digital Volume" = "1"
++kcontrol "AENG6 Volume" = "1"
++kcontrol "Mic 1 Gain Volume" = "1"
++kcontrol "Mic 3 Gain Volume" = "1"
++kcontrol "DIT#0 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_submic_ap b/msm8x16-skui-snd-card/seq_submic_ap
+new file mode 100644
+index 0000000..4595b37
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_submic_ap
+@@ -0,0 +1,13 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "ADC PDM SEL" = "1"
++kcontrol "AD ATT Switch" = "1"
++kcontrol "AD Analog Switch" = "1"
++kcontrol "AD Digital Switch" = "1"
++kcontrol "AE SRC" = "1"
++kcontrol "AENG6 Switch" = "1"
++kcontrol "MB3 Switch" = "1"
++kcontrol "ADCL MIXER Mic3 Switch" = "1"
++kcontrol "ADCR MIXER Mic3 Switch" = "1"
++kcontrol "DIT0 SRC" = "1"
++kcontrol "DIT#0 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_submic_ap_gain b/msm8x16-skui-snd-card/seq_submic_ap_gain
+new file mode 100644
+index 0000000..a1c08dd
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_submic_ap_gain
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "AD ATT Volume" = "1"
++kcontrol "AD Analog Volume" = "1"
++kcontrol "AD Digital Volume" = "1"
++kcontrol "AENG6 Volume" = "1"
++kcontrol "Mic 3 Gain Volume" = "1"
++kcontrol "DIT#0 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_submic_cp b/msm8x16-skui-snd-card/seq_submic_cp
+new file mode 100644
+index 0000000..73c2a2b
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_submic_cp
+@@ -0,0 +1,13 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "ADC PDM SEL" = "1"
++kcontrol "AD ATT Switch" = "1"
++kcontrol "AD Analog Switch" = "1"
++kcontrol "AD Digital Switch" = "1"
++kcontrol "AE SRC" = "1"
++kcontrol "AENG6 Switch" = "1"
++kcontrol "MB3 Switch" = "1"
++kcontrol "ADCL MIXER Mic3 Switch" = "1"
++kcontrol "ADCR MIXER Mic3 Switch" = "1"
++kcontrol "DIT1 SRC" = "1"
++kcontrol "DIT#1 Capture Switch" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/seq_submic_cp_gain b/msm8x16-skui-snd-card/seq_submic_cp_gain
+new file mode 100644
+index 0000000..bb10048
+--- /dev/null
++++ b/msm8x16-skui-snd-card/seq_submic_cp_gain
+@@ -0,0 +1,8 @@
++kcontrol "Enable Codec" = "1"
++kcontrol "AD ATT Volume" = "1"
++kcontrol "AD Analog Volume" = "1"
++kcontrol "AD Digital Volume" = "1"
++kcontrol "AENG6 Volume" = "1"
++kcontrol "Mic 3 Gain Volume" = "1"
++kcontrol "DIT#1 Capture Volume" = "1"
++kcontrol "Disable Codec" = "1"
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_bt b/msm8x16-skui-snd-card/val_ap_bt
+new file mode 100644
+index 0000000..b22d1aa
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_bt
+@@ -0,0 +1,7 @@
++'Enable Codec':1:1
++'DIT2 SRC':1:5
++'DIGITAL MIXER Dir0 Switch':1:1
++'DIR#0 ATT Switch':2:1,1
++'DIR#0 Switch':2:1,1
++'DIT#2 Capture Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_bt_gain b/msm8x16-skui-snd-card/val_ap_bt_gain
+new file mode 100644
+index 0000000..365e566
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_bt_gain
+@@ -0,0 +1,5 @@
++'Enable Codec':1:1
++'DIR#0 ATT Volume':2:70,70
++'DIR#0 Volume':2:70,70
++'DIT#2 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_dock b/msm8x16-skui-snd-card/val_ap_dock
+new file mode 100644
+index 0000000..d9cc11a
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_dock
+@@ -0,0 +1,13 @@
++'Enable Codec':1:1
++'DACMAIN SRC':1:5
++'DACVOICE SRC':1:3
++'DIGITAL MIXER Dir0 Switch':1:1
++'DIR#0 ATT Switch':2:1,1
++'DIR#0 Switch':2:1,1
++'Voice Playback Switch':2:1,1
++'Master Playback Switch':2:1,1
++'DAC Playback Switch':2:1,1
++'LINEOUT1L MIXER Dac Switch':1:1
++'LINEOUT1R MIXER DacR Switch':1:1
++'Line 1 Playback Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_dock_gain b/msm8x16-skui-snd-card/val_ap_dock_gain
+new file mode 100644
+index 0000000..e5c6d52
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_dock_gain
+@@ -0,0 +1,9 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#0 ATT Volume':2:70,70
++'DIR#0 Volume':2:70,70
++'Line 1 Playback Volume':2:31,31
++'HP Gain Playback Volume':1:3
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_headset b/msm8x16-skui-snd-card/val_ap_headset
+new file mode 100644
+index 0000000..6edd1d1
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_headset
+@@ -0,0 +1,13 @@
++'Enable Codec':1:1
++'DACMAIN SRC':1:5
++'DACVOICE SRC':1:3
++'DIGITAL MIXER Dir0 Switch':1:1
++'DIR#0 ATT Switch':2:1,1
++'DIR#0 Switch':2:1,1
++'Voice Playback Switch':2:1,1
++'Master Playback Switch':2:1,1
++'DAC Playback Switch':2:1,1
++'HPL MIXER Dac Switch':1:1
++'HPR MIXER DacR Switch':1:1
++'Headphone Playback Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_headset_gain b/msm8x16-skui-snd-card/val_ap_headset_gain
+new file mode 100644
+index 0000000..c2b5c80
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_headset_gain
+@@ -0,0 +1,9 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#0 ATT Volume':2:70,70
++'DIR#0 Volume':2:70,70
++'Headphone Playback Volume':2:31,31
++'HP Gain Playback Volume':1:3
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_headset_ringtone_gain b/msm8x16-skui-snd-card/val_ap_headset_ringtone_gain
+new file mode 100644
+index 0000000..c2b5c80
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_headset_ringtone_gain
+@@ -0,0 +1,9 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#0 ATT Volume':2:70,70
++'DIR#0 Volume':2:70,70
++'Headphone Playback Volume':2:31,31
++'HP Gain Playback Volume':1:3
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_receiver b/msm8x16-skui-snd-card/val_ap_receiver
+new file mode 100644
+index 0000000..3c700e8
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_receiver
+@@ -0,0 +1,13 @@
++'Enable Codec':1:1
++'DACMAIN SRC':1:5
++'DACVOICE SRC':1:3
++'DIGITAL MIXER Dir0 Switch':1:1
++'DIR#0 ATT Switch':2:1,1
++'DIR#0 Switch':2:1,1
++'Voice Playback Switch':2:1,1
++'Master Playback Switch':2:1,1
++'DAC Playback Switch':2:1,1
++'RC MIXER DacL Switch':1:1
++'RC MIXER DacR Switch':1:1
++'Receiver Playback Switch':1:1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_receiver_gain b/msm8x16-skui-snd-card/val_ap_receiver_gain
+new file mode 100644
+index 0000000..c3b43f4
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_receiver_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#0 ATT Volume':2:70,70
++'DIR#0 Volume':2:70,70
++'Receiver Playback Volume':1:31
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_speaker b/msm8x16-skui-snd-card/val_ap_speaker
+new file mode 100644
+index 0000000..2eaccbd
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_speaker
+@@ -0,0 +1,15 @@
++'Enable Codec':1:1
++'DACMAIN SRC':1:5
++'DACVOICE SRC':1:3
++'DIGITAL MIXER Dir0 Switch':1:1
++'DIR#0 ATT Switch':2:1,1
++'DIR#0 Switch':2:1,1
++'Voice Playback Switch':2:1,1
++'Master Playback Switch':2:1,1
++'DAC Playback Switch':2:1,1
++'SPL DAC MIXMODE':1:0
++'SPR DAC MIXMODE':1:0
++'SPL MIXER Dac Switch':1:1
++'SPR MIXER Dac Switch':1:1
++'Speaker Playback Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_speaker_gain b/msm8x16-skui-snd-card/val_ap_speaker_gain
+new file mode 100644
+index 0000000..fdf7370
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_speaker_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#0 ATT Volume':2:70,70
++'DIR#0 Volume':2:70,70
++'Speaker Playback Volume':2:31,31
++'Disable Codec':1:1
+diff --git a/msm8x16-skui-snd-card/val_ap_speaker_left b/msm8x16-skui-snd-card/val_ap_speaker_left
+new file mode 100644
+index 0000000..075f097
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_speaker_left
+@@ -0,0 +1,3 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_speaker_right b/msm8x16-skui-snd-card/val_ap_speaker_right
+new file mode 100644
+index 0000000..075f097
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_speaker_right
+@@ -0,0 +1,3 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_ap_speaker_ringtone_gain b/msm8x16-skui-snd-card/val_ap_speaker_ringtone_gain
+new file mode 100644
+index 0000000..430a88c
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_ap_speaker_ringtone_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#0 ATT Volume':2:70,70
++'DIR#0 Volume':2:70,70
++'Speaker Playback Volume':2:31,31
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_bt_ap b/msm8x16-skui-snd-card/val_bt_ap
+new file mode 100644
+index 0000000..351fef6
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_bt_ap
+@@ -0,0 +1,7 @@
++'Enable Codec':1:1
++'DIT0 SRC':1:5
++'DIGITAL MIXER Dir2 Switch':1:1
++'DIR#2 ATT Switch':2:1,1
++'DIR#2 Switch':2:1,1
++'DIT#0 Capture Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_bt_ap_gain b/msm8x16-skui-snd-card/val_bt_ap_gain
+new file mode 100644
+index 0000000..5dc86fe
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_bt_ap_gain
+@@ -0,0 +1,5 @@
++'Enable Codec':1:1
++'DIR#2 ATT Volume':2:70,70
++'DIR#2 Volume':2:70,70
++'DIT#0 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_bt_cp b/msm8x16-skui-snd-card/val_bt_cp
+new file mode 100644
+index 0000000..e2d72e9
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_bt_cp
+@@ -0,0 +1,6 @@
++'Enable Codec':1:1
++'DIT1 SRC':1:4
++'DIGITAL MIXER Dir2 Switch':1:1
++'DIR#2 Switch':2:1,1
++'DIT#1 Capture Switch':2:1,1
++'Disable Codec':1:1
+diff --git a/msm8x16-skui-snd-card/val_bt_cp_gain b/msm8x16-skui-snd-card/val_bt_cp_gain
+new file mode 100644
+index 0000000..c6d7b6f
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_bt_cp_gain
+@@ -0,0 +1,5 @@
++'Enable Codec':1:1
++'DIR#2 ATT Volume':2:70,70
++'DIR#2 Volume':2:70,70
++'DIT#1 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_codec_disable_on_suspend b/msm8x16-skui-snd-card/val_codec_disable_on_suspend
+new file mode 100644
+index 0000000..c26bbaf
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_codec_disable_on_suspend
+@@ -0,0 +1,3 @@
++'Enable Codec':1:1
++'Enable on Suspend':1:0
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_ap b/msm8x16-skui-snd-card/val_cp_ap
+new file mode 100644
+index 0000000..fac285c
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_ap
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'DIT0 SRC':1:5
++'DIGITAL MIXER Dir1 Switch':1:1
++'DIR#1 ATT Switch':2:1,1
++'DIR#1 Switch':2:1,1
++'DIT#0 Capture Switch':2:1,1
++'Enable on Suspend':1:1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_ap_gain b/msm8x16-skui-snd-card/val_cp_ap_gain
+new file mode 100644
+index 0000000..cb9509b
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_ap_gain
+@@ -0,0 +1,5 @@
++'Enable Codec':1:1
++'DIR#1 ATT Volume':2:70,70
++'DIR#1 Volume':2:70,70
++'DIT#0 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_bt b/msm8x16-skui-snd-card/val_cp_bt
+new file mode 100644
+index 0000000..b261e4c
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_bt
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'DIT2 SRC':1:5
++'DIGITAL MIXER Dir1 Switch':1:1
++'DIR#1 ATT Switch':2:1,1
++'DIR#1 Switch':2:1,1
++'DIT#2 Capture Switch':2:1,1
++'Enable on Suspend':1:1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_bt_gain b/msm8x16-skui-snd-card/val_cp_bt_gain
+new file mode 100644
+index 0000000..ebcccd5
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_bt_gain
+@@ -0,0 +1,5 @@
++'Enable Codec':1:1
++'DIR#1 ATT Volume':2:70,70
++'DIR#1 Volume':2:70,70
++'DIT#2 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_headset b/msm8x16-skui-snd-card/val_cp_headset
+new file mode 100644
+index 0000000..6e0eeff
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_headset
+@@ -0,0 +1,14 @@
++'Enable Codec':1:1
++'DACMAIN SRC':1:5
++'DACVOICE SRC':1:3
++'DIGITAL MIXER Dir1 Switch':1:1
++'DIR#1 ATT Switch':2:1,1
++'DIR#1 Switch':2:1,1
++'Voice Playback Switch':2:1,1
++'Master Playback Switch':2:1,1
++'DAC Playback Switch':2:1,1
++'HPL MIXER Dac Switch':1:1
++'HPR MIXER DacR Switch':1:1
++'Headphone Playback Switch':2:1,1
++'Enable on Suspend':1:1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_headset_gain b/msm8x16-skui-snd-card/val_cp_headset_gain
+new file mode 100644
+index 0000000..cf10383
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_headset_gain
+@@ -0,0 +1,9 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#1 ATT Volume':2:70,70
++'DIR#1 Volume':2:70,70
++'Headphone Playback Volume':2:31,31
++'HP Gain Playback Volume':1:3
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_headset_videocall_gain b/msm8x16-skui-snd-card/val_cp_headset_videocall_gain
+new file mode 100644
+index 0000000..cf10383
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_headset_videocall_gain
+@@ -0,0 +1,9 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#1 ATT Volume':2:70,70
++'DIR#1 Volume':2:70,70
++'Headphone Playback Volume':2:31,31
++'HP Gain Playback Volume':1:3
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_headset_voicecall_gain b/msm8x16-skui-snd-card/val_cp_headset_voicecall_gain
+new file mode 100644
+index 0000000..cf10383
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_headset_voicecall_gain
+@@ -0,0 +1,9 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#1 ATT Volume':2:70,70
++'DIR#1 Volume':2:70,70
++'Headphone Playback Volume':2:31,31
++'HP Gain Playback Volume':1:3
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_receiver b/msm8x16-skui-snd-card/val_cp_receiver
+new file mode 100644
+index 0000000..6d7bcbf
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_receiver
+@@ -0,0 +1,14 @@
++'Enable Codec':1:1
++'DACMAIN SRC':1:5
++'DACVOICE SRC':1:3
++'DIGITAL MIXER Dir1 Switch':1:1
++'DIR#1 ATT Switch':2:1,1
++'DIR#1 Switch':2:1,1
++'Voice Playback Switch':2:1,1
++'Master Playback Switch':2:1,1
++'DAC Playback Switch':2:1,1
++'RC MIXER DacL Switch':1:1
++'RC MIXER DacR Switch':1:1
++'Receiver Playback Switch':1:1
++'Enable on Suspend':1:1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_receiver_gain b/msm8x16-skui-snd-card/val_cp_receiver_gain
+new file mode 100644
+index 0000000..579750f
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_receiver_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#1 ATT Volume':2:70,70
++'DIR#1 Volume':2:70,70
++'Receiver Playback Volume':1:31
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_receiver_videocall_gain b/msm8x16-skui-snd-card/val_cp_receiver_videocall_gain
+new file mode 100644
+index 0000000..579750f
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_receiver_videocall_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#1 ATT Volume':2:70,70
++'DIR#1 Volume':2:70,70
++'Receiver Playback Volume':1:31
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_receiver_voicecall_gain b/msm8x16-skui-snd-card/val_cp_receiver_voicecall_gain
+new file mode 100644
+index 0000000..579750f
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_receiver_voicecall_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#1 ATT Volume':2:70,70
++'DIR#1 Volume':2:70,70
++'Receiver Playback Volume':1:31
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_speaker b/msm8x16-skui-snd-card/val_cp_speaker
+new file mode 100644
+index 0000000..8d4ae13
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_speaker
+@@ -0,0 +1,16 @@
++'Enable Codec':1:1
++'DACMAIN SRC':1:5
++'DACVOICE SRC':1:3
++'DIGITAL MIXER Dir1 Switch':1:1
++'DIR#1 ATT Switch':2:1,1
++'DIR#1 Switch':2:1,1
++'Voice Playback Switch':2:1,1
++'Master Playback Switch':2:1,1
++'DAC Playback Switch':2:1,1
++'SPL MIXER Dac Switch':1:1
++'SPR MIXER Dac Switch':1:1
++'Speaker Playback Switch':2:1,1
++'SPL DAC MIXMODE':1:0
++'SPR DAC MIXMODE':1:0
++'Enable on Suspend':1:1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_speaker_gain b/msm8x16-skui-snd-card/val_cp_speaker_gain
+new file mode 100644
+index 0000000..ff28514
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_speaker_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#1 ATT Volume':2:70,70
++'DIR#1 Volume':2:70,70
++'Speaker Playback Volume':2:31,31
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_speaker_videocall_gain b/msm8x16-skui-snd-card/val_cp_speaker_videocall_gain
+new file mode 100644
+index 0000000..ff28514
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_speaker_videocall_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#1 ATT Volume':2:70,70
++'DIR#1 Volume':2:70,70
++'Speaker Playback Volume':2:31,31
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_cp_speaker_voicecall_gain b/msm8x16-skui-snd-card/val_cp_speaker_voicecall_gain
+new file mode 100644
+index 0000000..ff28514
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_cp_speaker_voicecall_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'DIR#1 ATT Volume':2:70,70
++'DIR#1 Volume':2:70,70
++'Speaker Playback Volume':2:31,31
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_earmic_ap b/msm8x16-skui-snd-card/val_earmic_ap
+new file mode 100644
+index 0000000..0d849c5
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_earmic_ap
+@@ -0,0 +1,13 @@
++'Enable Codec':1:1
++'ADC PDM SEL':1:0
++'AD ATT Switch':2:1,1
++'AD Analog Switch':2:1,1
++'AD Digital Switch':2:1,1
++'AE SRC':1:1
++'AENG6 Switch':2:1,1
++'MB2 Switch':1:1
++'ADCL MIXER Mic2 Switch':1:1
++'ADCR MIXER Mic2 Switch':1:1
++'DIT0 SRC':1:1
++'DIT#0 Capture Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_earmic_ap_gain b/msm8x16-skui-snd-card/val_earmic_ap_gain
+new file mode 100644
+index 0000000..0f9554c
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_earmic_ap_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'AD ATT Volume':2:70,70
++'AD Analog Volume':2:31,31
++'AD Digital Volume':2:80,80
++'AENG6 Volume':2:70,70
++'Mic 2 Gain Volume':1:3
++'DIT#0 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_earmic_cp b/msm8x16-skui-snd-card/val_earmic_cp
+new file mode 100644
+index 0000000..9336613
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_earmic_cp
+@@ -0,0 +1,13 @@
++'Enable Codec':1:1
++'ADC PDM SEL':1:0
++'AD ATT Switch':2:1,1
++'AD Analog Switch':2:1,1
++'AD Digital Switch':2:1,1
++'AE SRC':1:1
++'AENG6 Switch':2:1,1
++'MB2 Switch':1:1
++'ADCL MIXER Mic2 Switch':1:1
++'ADCR MIXER Mic2 Switch':1:1
++'DIT1 SRC':1:1
++'DIT#1 Capture Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_earmic_cp_gain b/msm8x16-skui-snd-card/val_earmic_cp_gain
+new file mode 100644
+index 0000000..87b4060
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_earmic_cp_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'AD ATT Volume':2:70,70
++'AD Analog Volume':2:31,31
++'AD Digital Volume':2:80,80
++'AENG6 Volume':2:70,70
++'Mic 2 Gain Volume':1:3
++'DIT#1 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_fmradio_ap b/msm8x16-skui-snd-card/val_fmradio_ap
+new file mode 100644
+index 0000000..53e1b42
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_fmradio_ap
+@@ -0,0 +1,11 @@
++'Enable Codec':1:1
++'ADC PDM SEL':1:0
++'AD Analog Switch':2:1,1
++'AD Digital Switch':2:1,1
++'AENG6 Switch':2:1,1
++'AD ATT Switch':2:1,1
++'ADCL MIXER Line Switch':1:1
++'ADCR MIXER Line Switch':1:1
++'DIT0 SRC':1:1
++'DIT#0 Capture Switch':2:1,1
++'Disable Codec':1:1
+diff --git a/msm8x16-skui-snd-card/val_fmradio_ap_gain b/msm8x16-skui-snd-card/val_fmradio_ap_gain
+new file mode 100644
+index 0000000..0d568c7
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_fmradio_ap_gain
+@@ -0,0 +1,7 @@
++'Enable Codec':1:1
++'AD ATT Volume':2:70,70
++'AD Analog Volume':2:31,31
++'AD Digital Volume':2:80,80
++'AENG6 Volume':2:70,70
++'DIT#0 Capture Volume':2:70,70
++'Disable Codec':1:1
+diff --git a/msm8x16-skui-snd-card/val_fmradio_headset b/msm8x16-skui-snd-card/val_fmradio_headset
+new file mode 100644
+index 0000000..58433fe
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_fmradio_headset
+@@ -0,0 +1,15 @@
++'Enable Codec':1:1
++'Line 1 Playback Switch':2:1,1
++'Line 1 Playback Volume':2:31,31
++'Line 2 Playback Switch':2:1,1
++'Line 2 Playback Volume':2:31,31
++'Line Bypass Playback Switch':2:1,1
++'Line Bypass Playback Volume':2:15,15
++'HPL LINE MIXMODE':1:1
++'HPL MIXER Line Switch':1:1
++'HPR MIXER LineR Switch':1:1
++'Headphone Playback Switch':2:1,1
++'Headphone Playback Volume':2:31,31
++'HP Gain Playback Volume':1:3
++'Enable on Suspend':1:1
++'Disable Codec':1:1
+diff --git a/msm8x16-skui-snd-card/val_fmradio_headset_gain b/msm8x16-skui-snd-card/val_fmradio_headset_gain
+new file mode 100644
+index 0000000..075f097
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_fmradio_headset_gain
+@@ -0,0 +1,3 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_fmradio_speaker b/msm8x16-skui-snd-card/val_fmradio_speaker
+new file mode 100644
+index 0000000..bb6581c
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_fmradio_speaker
+@@ -0,0 +1,17 @@
++'Enable Codec':1:1
++'Line 1 Playback Switch':2:1,1
++'Line 1 Playback Volume':2:31,31
++'Line 2 Playback Switch':2:1,1
++'Line 2 Playback Volume':2:31,31
++'Line Bypass Playback Switch':2:1,1
++'Line Bypass Playback Volume':2:20,20
++'SPL LINE MIXMODE':1:0
++'SPR LINE MIXMODE':1:0
++'SPL MIXER Line Switch':1:1
++'SPR MIXER Line Switch':1:1
++'Speaker Playback Switch':2:1,1
++'Master Playback Volume':2:80,80
++'DAC Playback Volume':2:70,70
++'Voice Playback Volume':2:70,70
++'Enable on Suspend':1:1
++'Disable Codec':1:1
+diff --git a/msm8x16-skui-snd-card/val_fmradio_speaker_gain b/msm8x16-skui-snd-card/val_fmradio_speaker_gain
+new file mode 100644
+index 0000000..075f097
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_fmradio_speaker_gain
+@@ -0,0 +1,3 @@
++'Enable Codec':1:1
++'Master Playback Volume':2:80,80
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_mainmic_ap b/msm8x16-skui-snd-card/val_mainmic_ap
+new file mode 100644
+index 0000000..5ea6c0b
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_mainmic_ap
+@@ -0,0 +1,13 @@
++'Enable Codec':1:1
++'ADC PDM SEL':1:0
++'AD ATT Switch':2:1,1
++'AD Analog Switch':2:1,1
++'AD Digital Switch':2:1,1
++'AE SRC':1:1
++'AENG6 Switch':2:1,1
++'MB1 Switch':1:1
++'ADCL MIXER Mic1 Switch':1:1
++'ADCR MIXER Mic1 Switch':1:1
++'DIT0 SRC':1:1
++'DIT#0 Capture Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_mainmic_ap_gain b/msm8x16-skui-snd-card/val_mainmic_ap_gain
+new file mode 100644
+index 0000000..c565d1b
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_mainmic_ap_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'AD ATT Volume':2:70,70
++'AD Analog Volume':2:31,31
++'AD Digital Volume':2:80,80
++'AENG6 Volume':2:70,70
++'Mic 1 Gain Volume':1:3
++'DIT#0 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_mainmic_cp b/msm8x16-skui-snd-card/val_mainmic_cp
+new file mode 100644
+index 0000000..ea29d90
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_mainmic_cp
+@@ -0,0 +1,13 @@
++'Enable Codec':1:1
++'ADC PDM SEL':1:0
++'AD ATT Switch':2:1,1
++'AD Analog Switch':2:1,1
++'AD Digital Switch':2:1,1
++'AE SRC':1:1
++'AENG6 Switch':2:1,1
++'MB1 Switch':1:1
++'ADCL MIXER Mic1 Switch':1:1
++'ADCR MIXER Mic1 Switch':1:1
++'DIT1 SRC':1:1
++'DIT#1 Capture Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_mainmic_cp_gain b/msm8x16-skui-snd-card/val_mainmic_cp_gain
+new file mode 100644
+index 0000000..ca864fc
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_mainmic_cp_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'AD ATT Volume':2:70,70
++'AD Analog Volume':2:31,31
++'AD Digital Volume':2:80,80
++'AENG6 Volume':2:70,70
++'Mic 1 Gain Volume':1:3
++'DIT#1 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_mute_playback b/msm8x16-skui-snd-card/val_mute_playback
+new file mode 100644
+index 0000000..68139e3
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_mute_playback
+@@ -0,0 +1,4 @@
++'Enable Codec':1:1
++'Master Playback Switch':2:0,0
++'DAC Playback Switch':2:0,0
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_reset b/msm8x16-skui-snd-card/val_reset
+new file mode 100644
+index 0000000..4978db2
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_reset
+@@ -0,0 +1,57 @@
++'Enable Codec':1:1
++'DACMAIN SRC':1:0
++'DACVOICE SRC':1:0
++'DIGITAL MIXER Dir0 Switch':1:0
++'DIR#0 ATT Switch':2:0,0
++'DIR#0 Switch':2:0,0
++'DIGITAL MIXER Dir1 Switch':1:0
++'DIR#1 ATT Switch':2:0,0
++'DIR#1 Switch':2:0,0
++'Voice Playback Switch':2:0,0
++'Master Playback Switch':2:0,0
++'DAC Playback Switch':2:0,0
++'SPL MIXER Dac Switch':1:0
++'SPR MIXER Dac Switch':1:0
++'SPL MIXER Line Switch':1:0
++'SPR MIXER Line Switch':1:0
++'Speaker Playback Switch':2:0,0
++'SPL DAC MIXMODE':1:0
++'SPR DAC MIXMODE':1:0
++'SPL LINE MIXMODE':1:0
++'SPR LINE MIXMODE':1:0
++'HPL MIXER Dac Switch':1:0
++'HPR MIXER DacR Switch':1:0
++'HPL LINE MIXMODE':1:0
++'HPL MIXER Line Switch':1:0
++'HPR MIXER LineR Switch':1:0
++'Headphone Playback Switch':2:0,0
++'RC MIXER DacL Switch':1:0
++'RC MIXER DacR Switch':1:0
++'Receiver Playback Switch':1:0
++'DIGITAL MIXER Adc Switch':1:0
++'ADC PDM SEL':1:0
++'AD ATT Switch':2:0,0
++'AD Analog Switch':2:0,0
++'AD Digital Switch':2:0,0
++'AE SRC':1:0
++'AENG6 Switch':2:0,0
++'MB1 Switch':1:0
++'ADCL MIXER Mic1 Switch':1:0
++'ADCR MIXER Mic1 Switch':1:0
++'MB2 Switch':1:0
++'ADCL MIXER Mic2 Switch':1:0
++'ADCR MIXER Mic2 Switch':1:0
++'MB3 Switch':1:0
++'ADCL MIXER Mic3 Switch':1:0
++'ADCR MIXER Mic3 Switch':1:0
++'ADCL MIXER Line Switch':1:0
++'ADCR MIXER Line Switch':1:0
++'DIT0 SRC':1:0
++'DIT#0 Capture Switch':2:0,0
++'DIT1 SRC':1:0
++'DIT#1 Capture Switch':2:0,0
++'Line 1 Playback Switch':2:0,0
++'Line 2 Playback Switch':2:0,0
++'Line Bypass Playback Switch':2:0,0
++'Enable on Suspend':1:0
++'Disable Codec':1:1
+diff --git a/msm8x16-skui-snd-card/val_reset_capture b/msm8x16-skui-snd-card/val_reset_capture
+new file mode 100644
+index 0000000..d0932bc
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_reset_capture
+@@ -0,0 +1,22 @@
++'Enable Codec':1:1
++'ADC PDM SEL':1:0
++'AD ATT Switch':2:0,0
++'AD Analog Switch':2:0,0
++'AD Digital Switch':2:0,0
++'AE SRC':1:0
++'AENG6 Switch':2:0,0
++'MB1 Switch':1:0
++'ADCL MIXER Mic1 Switch':1:0
++'ADCR MIXER Mic1 Switch':1:0
++'DIT0 SRC':1:0
++'DIT#0 Capture Switch':2:0,0
++'DIT1 SRC':1:0
++'DIT#1 Capture Switch':2:0,0
++'MB2 Switch':1:0
++'ADCL MIXER Mic2 Switch':1:0
++'ADCR MIXER Mic2 Switch':1:0
++'DIT0 SRC':1:0
++'MB3 Switch':1:0
++'ADCL MIXER Mic3 Switch':1:0
++'ADCR MIXER Mic3 Switch':1:0
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_reset_playback b/msm8x16-skui-snd-card/val_reset_playback
+new file mode 100644
+index 0000000..09d627d
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_reset_playback
+@@ -0,0 +1,23 @@
++'Enable Codec':1:1
++'DACMAIN SRC':1:0
++'DACVOICE SRC':1:0
++'DIGITAL MIXER Dir0 Switch':1:0
++'DIR#0 ATT Switch':2:0,0
++'DIR#0 Switch':2:0,0
++'Voice Playback Switch':2:0,0
++'Master Playback Switch':2:0,0
++'DAC Playback Switch':2:0,0
++'SPL MIXER Dac Switch':1:0
++'SPR MIXER Dac Switch':1:0
++'Speaker Playback Switch':2:0,0
++'SPL DAC MIXMODE':1:0
++'SPR DAC MIXMODE':1:0
++'HPL MIXER Dac Switch':1:0
++'HPR MIXER DacR Switch':1:0
++'Headphone Playback Switch':2:0,0
++'RC MIXER DacL Switch':1:0
++'RC MIXER DacR Switch':1:0
++'Receiver Playback Switch':1:0
++'DIT2 SRC':1:0
++'DIT#2 Capture Switch':2:0,0
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_stereomic_ap b/msm8x16-skui-snd-card/val_stereomic_ap
+new file mode 100644
+index 0000000..3e2c6e0
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_stereomic_ap
+@@ -0,0 +1,14 @@
++'Enable Codec':1:1
++'ADC PDM SEL':1:0
++'AD ATT Switch':2:1,1
++'AD Analog Switch':2:1,1
++'AD Digital Switch':2:1,1
++'AE SRC':1:1
++'AENG6 Switch':2:1,1
++'MB1 Switch':1:1
++'MB3 Switch':1:1
++'ADCL MIXER Mic1 Switch':1:1
++'ADCR MIXER Mic3 Switch':1:1
++'DIT0 SRC':1:1
++'DIT#0 Capture Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_stereomic_ap_gain b/msm8x16-skui-snd-card/val_stereomic_ap_gain
+new file mode 100644
+index 0000000..2758544
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_stereomic_ap_gain
+@@ -0,0 +1,9 @@
++'Enable Codec':1:1
++'AD ATT Volume':2:70,70
++'AD Analog Volume':2:31,31
++'AD Digital Volume':2:80,80
++'AENG6 Volume':2:70,70
++'Mic 1 Gain Volume':1:3
++'Mic 3 Gain Volume':1:3
++'DIT#0 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_submic_ap b/msm8x16-skui-snd-card/val_submic_ap
+new file mode 100644
+index 0000000..38ef860
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_submic_ap
+@@ -0,0 +1,13 @@
++'Enable Codec':1:1
++'ADC PDM SEL':1:0
++'AD ATT Switch':2:1,1
++'AD Analog Switch':2:1,1
++'AD Digital Switch':2:1,1
++'AE SRC':1:1
++'AENG6 Switch':2:1,1
++'MB3 Switch':1:1
++'ADCL MIXER Mic3 Switch':1:1
++'ADCR MIXER Mic3 Switch':1:1
++'DIT0 SRC':1:1
++'DIT#0 Capture Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_submic_ap_gain b/msm8x16-skui-snd-card/val_submic_ap_gain
+new file mode 100644
+index 0000000..7b516d9
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_submic_ap_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'AD ATT Volume':2:70,70
++'AD Analog Volume':2:31,31
++'AD Digital Volume':2:80,80
++'AENG6 Volume':2:70,70
++'Mic 3 Gain Volume':1:3
++'DIT#0 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_submic_cp b/msm8x16-skui-snd-card/val_submic_cp
+new file mode 100644
+index 0000000..145eefd
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_submic_cp
+@@ -0,0 +1,13 @@
++'Enable Codec':1:1
++'ADC PDM SEL':1:0
++'AD ATT Switch':2:1,1
++'AD Analog Switch':2:1,1
++'AD Digital Switch':2:1,1
++'AE SRC':1:1
++'AENG6 Switch':2:1,1
++'MB3 Switch':1:1
++'ADCL MIXER Mic3 Switch':1:1
++'ADCR MIXER Mic3 Switch':1:1
++'DIT1 SRC':1:1
++'DIT#1 Capture Switch':2:1,1
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_submic_cp_gain b/msm8x16-skui-snd-card/val_submic_cp_gain
+new file mode 100644
+index 0000000..66837d3
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_submic_cp_gain
+@@ -0,0 +1,8 @@
++'Enable Codec':1:1
++'AD ATT Volume':2:70,70
++'AD Analog Volume':2:31,31
++'AD Digital Volume':2:80,80
++'AENG6 Volume':2:70,70
++'Mic 3 Gain Volume':1:3
++'DIT#1 Capture Volume':2:70,70
++'Disable Codec':1:1
+\ No newline at end of file
+diff --git a/msm8x16-skui-snd-card/val_unmute_playback b/msm8x16-skui-snd-card/val_unmute_playback
+new file mode 100644
+index 0000000..2103bc4
+--- /dev/null
++++ b/msm8x16-skui-snd-card/val_unmute_playback
+@@ -0,0 +1,4 @@
++'Enable Codec':1:1
++'Master Playback Switch':2:1,1
++'DAC Playback Switch':2:1,1
++'Disable Codec':1:1
+diff --git a/packaging/alsa-scenario-scn-data-0-msm8x16-skui-snd-card.spec b/packaging/alsa-scenario-scn-data-0-msm8x16-skui-snd-card.spec
+new file mode 100644
+index 0000000..247f15a
+--- /dev/null
++++ b/packaging/alsa-scenario-scn-data-0-msm8x16-skui-snd-card.spec
+@@ -0,0 +1,50 @@
++Name:       alsa-scenario-scn-data-0-msm8x16-skui-snd-card
++Summary:    alsa scenario data for msm8x16-skui-snd-card codec
++Version:    0.1.0
++Release:    2
++Group:      TO_BE/FILLED_IN
++License:    LGPLv2.1
++BuildArch:  noarch
++Source0:    %{name}-%{version}.tar.gz
++
++%description
++Alsa scenario data msm8x16-skui-snd-card codec
++
++%prep
++%setup -q
++
++%build
++
++%install
++rm -rf %{buildroot}
++mkdir -p %{buildroot}/usr/etc/sound
++cp -a msm8x16-skui-snd-card %{buildroot}/usr/etc/sound
++cp -a msm8x16-skui-snd-card.conf %{buildroot}/usr/etc/sound/msm8x16-skui-snd-card.conf
++
++mkdir -p %{buildroot}/usr/share/license
++cp LICENSE.LGPLv2.1 %{buildroot}/usr/share/license/%{name}
++
++%post
++BASE_PATH=/usr/etc/sound
++CODEC=msm8x16-skui-snd-card
++
++chmod 644 $BASE_PATH/$CODEC/*
++chmod 644 $BASE_PATH/$CODEC.conf
++
++chown -R 0:6822 $BASE_PATH/$CODEC
++chown 0:6822 $BASE_PATH/$CODEC.conf
++
++ln -s $BASE_PATH/$CODEC $BASE_PATH/default
++ln -s $BASE_PATH/$CODEC.conf $BASE_PATH/default.conf
++
++%preun
++BASE_PATH=/usr/etc/sound
++
++rm -f $BASE_PATH/default.conf
++rm -f $BASE_PATH/default
++
++
++%files
++%manifest alsa-scenario-scn-data-0-msm8x16-skui-snd-card.manifest
++/usr/etc/sound/*
++/usr/share/license/%{name}
