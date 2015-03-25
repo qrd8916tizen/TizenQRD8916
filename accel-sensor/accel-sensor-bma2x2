@@ -1,0 +1,55 @@
+diff --git a/sf_filter.conf.in b/sf_filter.conf.in
+index 5571d1c..0043982 100755
+--- a/sf_filter.conf.in
++++ b/sf_filter.conf.in
+@@ -5,6 +5,13 @@ version=1
+ disable=no
+ override=yes
+ 
++[accel_filter]
++path=/usr/lib/sensor_framework/libaccel_sim_filter.so
++id=1223
++version=1
++disable=no
++override=yes
++
+ [geo_filter]
+ path=/usr/lib/sensor_framework/libak8973b_filter.so
+ id=1224
+diff --git a/sf_processor.conf.in b/sf_processor.conf.in
+index 89146da..6f12dfb 100755
+--- a/sf_processor.conf.in
++++ b/sf_processor.conf.in
+@@ -6,6 +6,13 @@ override=yes
+ disable=no
+ 
+ [accel_processor]
++path=/usr/lib/sensor_framework/libaccel_sim_processor.so
++id=2114
++version=1
++override=yes
++disable=no
++
++[accel_processor]
+ path=/usr/lib/sensor_framework/liblsm330dlc_accel_processor.so
+ id=2114
+ version=1
+diff --git a/sf_sensor.conf.in b/sf_sensor.conf.in
+index 91a0109..d5ff090 100755
+--- a/sf_sensor.conf.in
++++ b/sf_sensor.conf.in
+@@ -9,6 +9,14 @@ poll=10
+ [accel_sensor]
+ disable=no
+ override=yes
++path=/usr/lib/sensor_framework/libaccel_bma2x2.so
++id=1114
++version=1
++poll=10
++
++[accel_sensor]
++disable=no
++override=yes
+ path=/usr/lib/sensor_framework/liblsm330dlc_accel.so
+ id=1114
+ version=1
